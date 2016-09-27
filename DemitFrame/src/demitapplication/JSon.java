@@ -15,6 +15,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import javax.swing.*;
 /**
  *
@@ -44,97 +46,129 @@ public class JSon extends javax.swing.JFrame {
     }
     
     public void checkFolder(){
+        Path currentRelativePath = Paths.get("");
+        String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        //System.out.println("Current relative path is: " + s);
         
-        File dataFile = new File(kategoryPath);
-        boolean dataexist = dataFile.exists();
-        if(dataexist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder kategory dan isi folder kategory terlebih dahulu");
-            System.exit(0);
-        }            
+        File dataFile = new File(kategoryPath);            
         File buildingsFile = new File(buildingsPath);
-        boolean buildingsExist = buildingsFile.exists();
-        if(buildingsExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (buildings) di dalam folder kategory");
-            System.exit(0);
-        }
         File armyFile = new File(armyPath);
-        boolean armyExist = armyFile.exists();
-        if(armyExist){
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (army) di dalam folder kategory");
-            System.exit(0);
-        }
-        File resourceFile = new File(resourcePath);
-        boolean resourceExist = resourceFile.exists();
-        if(resourceExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (resource) di dalam folder (buildings)");
-            System.exit(0);
-        }        
+        File resourceFile = new File(resourcePath);       
         File defensesFile = new File(defensesPath);
-        boolean defensesExist = defensesFile.exists();
-        if(defensesExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (defenses) di dalam folder (buildings)");
-            System.exit(0);
-        } 
         File armybuildFile = new File(armybuildPath);
-        boolean armybuildExist = armybuildFile.exists();
-        if(armybuildExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (army) di dalam folder (buildings)");
-            System.exit(0);
-        } 
         File reStorageFile = new File(reStoragePath);
-        boolean reStorageExist = reStorageFile.exists();
-        if(reStorageExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (storage) di dalam folder (resource)");
-            System.exit(0);
-        } 
         File reProdusenFile = new File(reProdusenPath);
-        boolean reProdusenExist = reProdusenFile.exists();
-        if(reProdusenExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (produsen) di dalam folder (resource)");
-            System.exit(0);
-        }
         File rePusatFile = new File(rePusatPath);
-        boolean rePusatExist = rePusatFile.exists();
-        if(rePusatExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (pusat) di dalam folder (resource)");
-            System.exit(0);
-        }
         File armyStorageFile = new File(armyStoragePath);
-        boolean armyStorageExist = armyStorageFile.exists();
-        if(armyStorageExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (storage) di dalam folder (army buildings)");
-            System.exit(0);
-        }
         File armyProdusenFile = new File(armyProdusenPath);
-        boolean armyProdusenExist = armyProdusenFile.exists();
-        if(armyProdusenExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (produsen) di dalam folder (army buildings)");
-            System.exit(0);
-        }
         File buildingsDefFile = new File(buildingsDefPath);
-        boolean buildingsDefExist = buildingsDefFile.exists();
-        if(buildingsDefExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (buildings) di dalam folder (defenses)");
-            System.exit(0);
-        }
         File trapsDefFile = new File(trapsDefPath);
+        
+        boolean dataexist = dataFile.exists();
+        boolean buildingsExist = buildingsFile.exists();
+        boolean armyExist = armyFile.exists();
+        boolean resourceExist = resourceFile.exists(); 
+        boolean defensesExist = defensesFile.exists(); 
+        boolean armybuildExist = armybuildFile.exists(); 
+        boolean reStorageExist = reStorageFile.exists(); 
+        boolean reProdusenExist = reProdusenFile.exists();
+        boolean rePusatExist = rePusatFile.exists();
+        boolean armyStorageExist = armyStorageFile.exists();
+        boolean armyProdusenExist = armyProdusenFile.exists();
+        boolean buildingsDefExist = buildingsDefFile.exists();
         boolean trapsDefExist = trapsDefFile.exists();
-        if(trapsDefExist) {
-        }else {
-            JOptionPane.showMessageDialog(this, "buatlah folder (traps) di dalam folder (defenses)");
-            System.exit(0);
+        
+        boolean success;
+        if(!dataexist) {
+            success = (new File(currentPathString + "/unit kategory")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create directory");
+            }
+        }
+        if(!buildingsExist) {
+            success = (new File(currentPathString + "/unit kategory/buildings")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create directory");
+            }
+        }
+        if(!armyExist){
+            success = (new File(currentPathString + "/unit kategory/army")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/army");
+            }
+        }
+        if(!resourceExist) {
+            success = (new File(currentPathString + "/unit kategory/buildings/resource")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/resource");
+            }
+        }
+        if(!defensesExist) {
+            success = (new File(currentPathString + "/unit kategory/buildings/defenses")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/defenses");
+            }
+        }
+        if(!armybuildExist) {
+            success = (new File(currentPathString + "/unit kategory/buildings/army buildings")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/army buildings");
+            }
+        }
+        if(!reStorageExist) {
+            success = (new File(currentPathString + "/unit kategory/buildings/resource/storage")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/resource/storage");
+            }
+        }
+        if(!reProdusenExist) {
+            success = (new File(currentPathString + "/unit kategory/buildings/resource/produsen")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/resource/produsen");
+            }
+        }
+        if(!rePusatExist) {
+            success = (new File(currentPathString + "/unit kategory/buildings/resource/pusat")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/resource/pusat");
+            }
+        }
+        if(!armyStorageExist) {
+            success = (new File(currentPathString + "/unit kategory/army/storage")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/army/storage");
+            }
+        }
+        if(!armyProdusenExist) {
+            success = (new File(currentPathString + "/unit kategory/army/produsen")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/army/produsen");
+            }
+        }
+        if(!buildingsDefExist) {
+            success = (new File(currentPathString + "/unit kategory/buildings/defenses/buildings")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/defenses/buildings");
+            }
+        }
+        if(!trapsDefExist) {
+            success = (new File(currentPathString + "/unit kategory/buildings/defenses/traps")).mkdirs();
+            if (!success) {
+                // Directory creation failed
+                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/defenses/traps");
+            }
         }
     }
     
