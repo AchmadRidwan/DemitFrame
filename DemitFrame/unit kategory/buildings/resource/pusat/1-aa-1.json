@@ -1,0 +1,58 @@
+{
+  "unitType": 1,
+  "name": "aa",
+  "level": 1,
+  "maxHitpoint": 1.0,
+  "buildCost": 1,
+  "buildTime": 1.0,
+  "experienceGained": 1,
+  "maximumUnitQueueItems": [
+    "zz",
+    "1",
+    "apo",
+    "2",
+    "zz",
+    "1",
+    "zz",
+    "1",
+    "zz",
+    "1"
+  ],
+  "maximumUnitQueueItems1": [
+    "zz",
+    "1",
+    "apo",
+    "2",
+    "zz",
+    "1",
+    "zz",
+    "1",
+    "zz",
+    "1"
+  ],
+  "maximumUnitQueueItems2": [
+    "zz",
+    "1",
+    "apo",
+    "2",
+    "zz",
+    "1",
+    "zz",
+    "1",
+    "zz",
+    "1"
+  ],
+  "maximumUnitQueueItems3": [
+    "zz",
+    "1",
+    "apo",
+    "2",
+    "zz",
+    "1",
+    "zz",
+    "1",
+    "zz",
+    "1"
+  ],
+  "description": "sad"
+}

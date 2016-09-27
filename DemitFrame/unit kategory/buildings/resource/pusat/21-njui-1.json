@@ -1,0 +1,14 @@
+{
+  "unitType": 21,
+  "name": "njui",
+  "level": 1,
+  "maxHitpoint": 21.0,
+  "buildCost": 221,
+  "buildTime": 21.0,
+  "experienceGained": 12,
+  "maximumUnitQueueItems": [
+    "apo",
+    "12"
+  ],
+  "description": "oki"
+}

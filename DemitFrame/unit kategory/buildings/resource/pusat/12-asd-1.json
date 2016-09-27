@@ -1,0 +1,14 @@
+{
+  "unitType": 12,
+  "name": "asd",
+  "level": 1,
+  "maxHitpoint": 121.0,
+  "buildCost": 12,
+  "buildTime": 212.0,
+  "experienceGained": 12,
+  "maximumUnitQueueItems": [
+    "dd",
+    "1"
+  ],
+  "description": "asdqw"
+}

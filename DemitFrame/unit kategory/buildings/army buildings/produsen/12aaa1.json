@@ -1,0 +1,18 @@
+{
+  "unitType": 12,
+  "name": "aaa",
+  "level": 1,
+  "maxHitpoint": 12.0,
+  "buildCost": 12,
+  "buildTime": 12.0,
+  "experienceGained": 12,
+  "townHallLevelRequired": 1,
+  "description": "sss",
+  "boostCost": 12,
+  "maximumUnitQueueLength": 12,
+  "maximumUnitQueueItems": [
+    "1",
+    "2",
+    "3"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "unitType": 11,
+  "name": "apo",
+  "level": 1,
+  "damage": 122.0,
+  "maxHitpoint": 12.0,
+  "buildCost": 12,
+  "buildTime": 12.0,
+  "range": 12.0,
+  "damageType": 0,
+  "unitTypeTarget": 0,
+  "attackSpeed": 12.0,
+  "experienceGained": 12,
+  "townHallLevelRequired": 1,
+  "description": "asdq"
+}

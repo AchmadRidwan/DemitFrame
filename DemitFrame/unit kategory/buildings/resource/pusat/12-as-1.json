@@ -1,0 +1,11 @@
+{
+  "unitType": 12,
+  "name": "as",
+  "level": 1,
+  "maxHitpoint": 12.0,
+  "buildCost": 12,
+  "buildTime": 12.0,
+  "experienceGained": 12,
+  "maximumUnitQueueItems": [],
+  "description": "as"
+}
