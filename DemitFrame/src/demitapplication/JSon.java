@@ -380,22 +380,30 @@ public class JSon extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         capacityList2 = new javax.swing.JList<>();
         jScrollPane7 = new javax.swing.JScrollPane();
-        capacityList3 = new javax.swing.JList<>();
+        maxLevelList2 = new javax.swing.JList<>();
         jScrollPane8 = new javax.swing.JScrollPane();
-        capacityList4 = new javax.swing.JList<>();
+        maxLevelList1 = new javax.swing.JList<>();
         jLabel75 = new javax.swing.JLabel();
         jLabel76 = new javax.swing.JLabel();
         jLabel77 = new javax.swing.JLabel();
         jLabel78 = new javax.swing.JLabel();
         jLabel79 = new javax.swing.JLabel();
         jLabel80 = new javax.swing.JLabel();
+        jScrollPane24 = new javax.swing.JScrollPane();
+        nameList3 = new javax.swing.JList<>();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        maxLevelList3 = new javax.swing.JList<>();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        capacityList3 = new javax.swing.JList<>();
+        jLabel81 = new javax.swing.JLabel();
+        jLabel83 = new javax.swing.JLabel();
+        jLabel84 = new javax.swing.JLabel();
         jLabel107 = new javax.swing.JLabel();
-        jLabel108 = new javax.swing.JLabel();
         jLabel109 = new javax.swing.JLabel();
         jLabel110 = new javax.swing.JLabel();
         jLabel111 = new javax.swing.JLabel();
-        jLabel112 = new javax.swing.JLabel();
-        jLabel113 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
+        jLabel86 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
         jLabel115 = new javax.swing.JLabel();
         jLabel116 = new javax.swing.JLabel();
@@ -427,6 +435,12 @@ public class JSon extends javax.swing.JFrame {
         maxLevel2 = new javax.swing.JTextField();
         jLabel73 = new javax.swing.JLabel();
         jLabel74 = new javax.swing.JLabel();
+        name3 = new javax.swing.JTextField();
+        maxLevel3 = new javax.swing.JTextField();
+        capacity3 = new javax.swing.JTextField();
+        jButton13 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -543,7 +557,7 @@ public class JSon extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(productionRateRes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -1376,7 +1390,7 @@ public class JSon extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane4)
+                .addComponent(jTabbedPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1488,7 +1502,7 @@ public class JSon extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
                     .addComponent(nameAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -1887,7 +1901,7 @@ public class JSon extends javax.swing.JFrame {
                     .addComponent(jLabel103)
                     .addComponent(darkElixirAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton12))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Town Hall", jPanel23);
@@ -1904,11 +1918,11 @@ public class JSon extends javax.swing.JFrame {
         capacityList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jScrollPane6.setViewportView(capacityList2);
 
-        capacityList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jScrollPane7.setViewportView(capacityList3);
+        maxLevelList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jScrollPane7.setViewportView(maxLevelList2);
 
-        capacityList4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jScrollPane8.setViewportView(capacityList4);
+        maxLevelList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jScrollPane8.setViewportView(maxLevelList1);
 
         jLabel75.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel75.setText("Name File");
@@ -1928,36 +1942,70 @@ public class JSon extends javax.swing.JFrame {
         jLabel80.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel80.setText("Name File");
 
+        nameList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jScrollPane24.setViewportView(nameList3);
+
+        maxLevelList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jScrollPane9.setViewportView(maxLevelList3);
+
+        capacityList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jScrollPane10.setViewportView(capacityList3);
+
+        jLabel81.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel81.setText("Name File");
+
+        jLabel83.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel83.setText("MAX Lvl");
+
+        jLabel84.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel84.setText("Capacity");
+
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
         jPanel25Layout.setHorizontalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel25Layout.createSequentialGroup()
-                .addGap(91, 91, 91)
+                .addContainerGap()
                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel75, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel77, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(87, 87, 87)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel84)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel76, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(30, 30, 30)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel77, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel79, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel78)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(83, 83, 83))
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel78))
+                .addContainerGap())
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1968,12 +2016,14 @@ public class JSon extends javax.swing.JFrame {
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel75)
                             .addComponent(jLabel76)
-                            .addComponent(jLabel77, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel77, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel81)
+                            .addComponent(jLabel83)
+                            .addComponent(jLabel84, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel78, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1983,53 +2033,60 @@ public class JSon extends javax.swing.JFrame {
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jScrollPane23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
         jLabel107.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel107.setText("Resource and Offensive");
-
-        jLabel108.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel108.setText("Buildings Available");
+        jLabel107.setText("Resource Buildings Available");
 
         jLabel109.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel109.setText("Defensive Buildings Available");
 
         jLabel110.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel110.setText("Resource, Army and Other");
+        jLabel110.setText("Resource Buildings Max Level By TH");
 
         jLabel111.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel111.setText("Defensive Buildings Max");
+        jLabel111.setText("Defensive Buildings Max Available Level");
 
-        jLabel112.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel112.setText("Buildings Max Level By TH");
+        jLabel85.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel85.setText("Offensive Buildings Available");
 
-        jLabel113.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel113.setText("Available Level");
+        jLabel86.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel86.setText("Army and Other Buildings Max Level By TH");
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel24Layout.createSequentialGroup()
-                .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel24Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel24Layout.createSequentialGroup()
+                                .addComponent(jLabel107)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel24Layout.createSequentialGroup()
+                                .addComponent(jLabel110)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(104, 104, 104)
+                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel86))
+                        .addGap(102, 102, 102)
+                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel109)
+                            .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(68, 68, 68)))
                 .addContainerGap())
-            .addGroup(jPanel24Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel107)
-                    .addComponent(jLabel108))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(150, 150, 150)
-                .addComponent(jLabel109)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2038,19 +2095,17 @@ public class JSon extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addComponent(jLabel110)
+                        .addComponent(jLabel109)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel112))
-                    .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel111)
-                        .addComponent(jLabel109))
+                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel111)
+                            .addComponent(jLabel86)))
                     .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel113))
-                    .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addComponent(jLabel107)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel108)))
+                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel107)
+                            .addComponent(jLabel85))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel110)))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
@@ -2062,7 +2117,7 @@ public class JSon extends javax.swing.JFrame {
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane3)
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel20Layout.setVerticalGroup(
@@ -2196,6 +2251,39 @@ public class JSon extends javax.swing.JFrame {
         jLabel74.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel74.setText("Level");
 
+        name3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        name3.setText("11-zz");
+        name3.setEnabled(false);
+
+        maxLevel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        capacity3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        capacity3.setText("1");
+
+        jButton13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jButton13.setText("Add");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jButton21.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jButton21.setText("Delete");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+
+        jButton16.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jButton16.setText("Open File");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
@@ -2220,18 +2308,13 @@ public class JSon extends javax.swing.JFrame {
                                                     .addComponent(buildTimeRes1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(name1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(name2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
+                                                    .addComponent(name2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(name1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(name3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(jPanel19Layout.createSequentialGroup()
                                                 .addGap(0, 0, Short.MAX_VALUE)
                                                 .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel19Layout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(maxLevel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(maxLevel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(10, 10, 10))
                                             .addGroup(jPanel19Layout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
                                                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2240,14 +2323,24 @@ public class JSon extends javax.swing.JFrame {
                                                         .addGap(18, 18, 18))
                                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
                                                         .addComponent(jLabel74, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                                                        .addGap(18, 18, 18)))))
+                                                        .addGap(18, 18, 18))))
+                                            .addGroup(jPanel19Layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(maxLevel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(maxLevel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(maxLevel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(10, 10, 10)))
                                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                 .addComponent(jLabel72, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                                                 .addComponent(capacity1))
-                                            .addComponent(capacity2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(capacity2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(capacity3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jButton13)
                                             .addComponent(jButton11)
                                             .addComponent(jButton8)))
                                     .addGroup(jPanel19Layout.createSequentialGroup()
@@ -2270,18 +2363,24 @@ public class JSon extends javax.swing.JFrame {
                                 .addGap(110, 110, 110)))
                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
+                            .addGroup(jPanel19Layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
                                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
+                                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel19Layout.createSequentialGroup()
+                                                .addComponent(jButton18)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButton10))
+                                            .addGroup(jPanel19Layout.createSequentialGroup()
+                                                .addComponent(jButton20)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButton15)))
+                                        .addGap(8, 8, 8))
                                     .addGroup(jPanel19Layout.createSequentialGroup()
-                                        .addComponent(jButton20)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jButton15))
-                                    .addGroup(jPanel19Layout.createSequentialGroup()
-                                        .addComponent(jButton18)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jButton10)))
-                                .addGap(8, 8, 8)))))
+                                        .addComponent(jButton21)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton16)))))))
                 .addContainerGap())
         );
         jPanel19Layout.setVerticalGroup(
@@ -2301,46 +2400,47 @@ public class JSon extends javax.swing.JFrame {
                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(nameRes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel119))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addComponent(jLabel73)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel71, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel72, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel72, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
                     .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(hitpointRes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel114)
                         .addComponent(jLabel74)))
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(buildTimeRes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel115))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel116)
-                            .addComponent(buildCostRes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(name2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(maxLevel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(capacity2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton11)
-                            .addComponent(jButton20)
-                            .addComponent(jButton15))
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(experienceRes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel117)))
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(name1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(maxLevel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(capacity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton8)
-                            .addComponent(jButton18)
-                            .addComponent(jButton10))))
-                .addGap(17, 17, 17)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buildTimeRes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel115)
+                    .addComponent(name1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(maxLevel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(capacity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton8)
+                    .addComponent(jButton18)
+                    .addComponent(jButton10))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel116)
+                    .addComponent(buildCostRes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(name2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(maxLevel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(capacity2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton11)
+                    .addComponent(jButton20)
+                    .addComponent(jButton15))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(experienceRes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel117)
+                    .addComponent(name3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(maxLevel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(capacity3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton13)
+                    .addComponent(jButton21)
+                    .addComponent(jButton16))
+                .addGap(16, 16, 16)
                 .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -2353,7 +2453,7 @@ public class JSon extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -2401,7 +2501,7 @@ public class JSon extends javax.swing.JFrame {
         int iLevel = Integer.parseInt(sLevel);
         int iTownHallLevelReq = Integer.parseInt(sTownHallLevelReq);
         float fBuildTime = Float.parseFloat(sBuildTime);
-        float fTimeToFill = Float.parseFloat(sTimeToFill);
+//        float fTimeToFill = Float.parseFloat(sTimeToFill);
         float fCatchUpPoint = Float.parseFloat(sCatchUpPoint);
         float fHitpoint = Float.parseFloat(sHitpoint);
 
@@ -2445,7 +2545,7 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("capacity", capacity);
             jo.addProperty("productionRate", productionRate);
             jo.addProperty("maxHitpoint", fHitpoint);
-            jo.addProperty("timeToFill", fTimeToFill);
+//            jo.addProperty("timeToFill", fTimeToFill);
             jo.addProperty("catchUpPoint", fCatchUpPoint);
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
@@ -2822,7 +2922,8 @@ public class JSon extends javax.swing.JFrame {
             for ( int a = 0; a < army; a++ ){
                 unitQueueArray.add(new JsonPrimitive(armyList.getModel().getElementAt(a).toString()));
             }
-            jo.add("maximumUnitQueueItems", unitQueueArray);
+            jo.add("unlockArmy", unitQueueArray);
+            jo.addProperty("description", sDescription);
                             
             try {
                 FileWriter file = new FileWriter(dir+"\\unit kategory\\buildings\\army buildings\\produsen\\"+unitType+"-"+sName+"-"+iLevel+".json");
@@ -2834,6 +2935,8 @@ public class JSon extends javax.swing.JFrame {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            modelArmy.clear();
+            armyList.setModel(modelArmy);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -3037,14 +3140,19 @@ public class JSon extends javax.swing.JFrame {
     }//GEN-LAST:event_attackSpeedDefFocusLost
     
     DefaultListModel modelArmy = new DefaultListModel();
+    
     DefaultListModel nameModel1 = new DefaultListModel();
     DefaultListModel nameModel2 = new DefaultListModel();
     DefaultListModel nameModel3 = new DefaultListModel();
-    DefaultListModel nameModel4 = new DefaultListModel();
+
     DefaultListModel numberCapacity1 = new DefaultListModel();
     DefaultListModel numberCapacity2 = new DefaultListModel();
     DefaultListModel numberCapacity3 = new DefaultListModel();
-    DefaultListModel numberCapacity4 = new DefaultListModel();
+    
+    DefaultListModel maxLvlbuild1 = new DefaultListModel();
+    DefaultListModel maxLvlbuild2 = new DefaultListModel();
+    DefaultListModel maxLvlbuild3 = new DefaultListModel();
+    
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
         // TODO add your handling code here:
         if(armyName.getText().equals("")) {
@@ -3129,10 +3237,13 @@ public class JSon extends javax.swing.JFrame {
             
             int nameCp1 = nameList1.getModel().getSize();
             int nameCp2 = nameList2.getModel().getSize();
+            int nameCp3 = nameList3.getModel().getSize();
             int capacity1 = capacityList1.getModel().getSize();
             int capacity2 = capacityList2.getModel().getSize();
-            int capacity3 = capacityList3.getModel().getSize();
-            int capacity4 = capacityList4.getModel().getSize();           
+            int capacity3 = maxLevelList2.getModel().getSize();
+            int maxLvl1 = maxLevelList1.getModel().getSize();
+            int maxLvl2 = maxLevelList2.getModel().getSize();
+            int maxLvl3 = maxLevelList3.getModel().getSize();           
 
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             JsonObject jo = new JsonObject();
@@ -3151,17 +3262,59 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("experienceGained", fAvailableToBeStolen);
             jo.addProperty("experienceGained", cap);
             jo.addProperty("experienceGained", storageAmount);
-            JsonArray unitArray = new JsonArray();
+            JsonArray namefile1 = new JsonArray();
             for ( int a = 0; a < nameCp1; a++ ){
-                unitArray.add(new JsonPrimitive(nameList1.getModel().getElementAt(a).toString()));
-                unitArray.add(new JsonPrimitive(capacityList1.getModel().getElementAt(a)));
+                namefile1.add(new JsonPrimitive(nameList1.getModel().getElementAt(a).toString()));
             }
-            jo.add("maximumUnitQueueItems", unitArray);
+            jo.add("nameFile1", namefile1);
+            
+            JsonArray capacityLs1 = new JsonArray();
+            for ( int a = 0; a < nameCp1; a++ ){
+                capacityLs1.add(new JsonPrimitive(capacityList1.getModel().getElementAt(a).toString()));
+            }
+            jo.add("capacity1", capacityLs1);
+            
+            JsonArray maxLevel1 = new JsonArray();
+            for ( int a = 0; a < nameCp1; a++ ){
+                maxLevel1.add(new JsonPrimitive(maxLevelList1.getModel().getElementAt(a).toString()));
+            }
+            jo.add("maxLevel1", maxLevel1);
+            
+            JsonArray namefile2 = new JsonArray();
             for ( int b = 0; b < nameCp2; b++ ){
-                unitArray.add(new JsonPrimitive(nameList2.getModel().getElementAt(b).toString()));
-                unitArray.add(new JsonPrimitive(capacityList2.getModel().getElementAt(b)));
+                namefile2.add(new JsonPrimitive(nameList2.getModel().getElementAt(b).toString()));
             }
-            jo.add("maximumUnitQueueItems", unitArray);
+            jo.add("nameFile2", namefile2);
+            
+            JsonArray capacityLs2 = new JsonArray();
+            for ( int a = 0; a < nameCp1; a++ ){
+                capacityLs2.add(new JsonPrimitive(capacityList2.getModel().getElementAt(a).toString()));
+            }
+            jo.add("capacity2", capacityLs2);
+            
+            JsonArray maxLevel2 = new JsonArray();
+            for ( int a = 0; a < nameCp1; a++ ){
+                maxLevel2.add(new JsonPrimitive(maxLevelList2.getModel().getElementAt(a).toString()));
+            }
+            jo.add("maxLevel2", maxLevel2);
+            
+            JsonArray namefile3 = new JsonArray();
+            for ( int b = 0; b < nameCp2; b++ ){
+                namefile2.add(new JsonPrimitive(nameList2.getModel().getElementAt(b).toString()));
+            }
+            jo.add("nameFile3", namefile3);
+            
+            JsonArray capacityLs3 = new JsonArray();
+            for ( int a = 0; a < nameCp1; a++ ){
+                capacityLs3.add(new JsonPrimitive(maxLevelList2.getModel().getElementAt(a).toString()));
+            }
+            jo.add("capacity3", capacityLs3);
+            
+            JsonArray maxLevel3 = new JsonArray();
+            for ( int a = 0; a < nameCp1; a++ ){
+                maxLevel3.add(new JsonPrimitive(maxLevelList3.getModel().getElementAt(a).toString()));
+            }
+            jo.add("maxLevel3", maxLevel3);
             jo.addProperty("description", sDescription);
 
             try {
@@ -3174,6 +3327,26 @@ public class JSon extends javax.swing.JFrame {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            nameModel1.clear();
+            nameList1.setModel(nameModel1);
+            nameModel2.clear();
+            nameList2.setModel(nameModel2);
+            nameModel3.clear();
+            nameList3.setModel(nameModel3);
+            
+            numberCapacity1.clear();
+            capacityList1.setModel(numberCapacity1);
+            numberCapacity2.clear();
+            capacityList2.setModel(numberCapacity2);
+            numberCapacity3.clear();
+            maxLevelList2.setModel(numberCapacity3);
+            
+            maxLvlbuild1.clear();
+            maxLevelList1.setModel(maxLvlbuild1);
+            maxLvlbuild2.clear();
+            maxLevelList2.setModel(maxLvlbuild2);
+            maxLvlbuild3.clear();
+            maxLevelList3.setModel(maxLvlbuild3);
     }//GEN-LAST:event_jButton12ActionPerformed
     
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -3183,6 +3356,10 @@ public class JSon extends javax.swing.JFrame {
             return;
         }
         if(name1.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Masukan file army terlebih dahulu");
+            return;
+        }
+        if(maxLevel1.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Masukan file army terlebih dahulu");
             return;
         }
@@ -3196,6 +3373,9 @@ public class JSon extends javax.swing.JFrame {
         numberCapacity1.addElement(capacity1.getText());
         capacityList1.setModel(numberCapacity1);
         capacity1.setText("");
+        maxLvlbuild1.addElement(maxLevel1.getText());
+        maxLevelList1.setModel(maxLvlbuild1);
+        maxLevel1.setText("");
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -3208,6 +3388,10 @@ public class JSon extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Masukan file army terlebih dahulu");
             return;
         }
+        if(maxLevel2.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Masukan file army terlebih dahulu");
+            return;
+        }    
         String name = new String();
         name = name2.getText();
         String [] arrayName = name.split("-");
@@ -3218,6 +3402,9 @@ public class JSon extends javax.swing.JFrame {
         numberCapacity2.addElement(capacity2.getText());
         capacityList2.setModel(numberCapacity2);
         capacity2.setText("");
+        maxLvlbuild2.addElement(maxLevel2.getText());
+        maxLevelList2.setModel(maxLvlbuild2);
+        maxLevel2.setText("");
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -3247,13 +3434,60 @@ public class JSon extends javax.swing.JFrame {
         // TODO add your handling code here:
         name1.setText("");
         capacity1.setText("");
+        maxLevel1.setText("");
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
         name2.setText("");
         capacity2.setText("");
+        maxLevel2.setText("");
     }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+         if(capacity3.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Masukan file army terlebih dahulu");
+            return;
+        }
+            if(name3.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Masukan file army terlebih dahulu");
+            return;
+        }
+            if(maxLevel3.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Masukan file army terlebih dahulu");
+            return;
+        }
+        String name = new String();
+        name = name3.getText();
+        String [] arrayName = name.split("-");
+        String data2 = arrayName[1];
+        nameModel3.addElement(data2);
+        nameList3.setModel(nameModel3);
+        name3.setText("");
+        numberCapacity3.addElement(capacity3.getText());
+        capacityList3.setModel(numberCapacity3);
+        capacity3.setText("");
+        maxLvlbuild3.addElement(maxLevel3.getText());
+        maxLevelList3.setModel(maxLvlbuild3);
+        maxLevel3.setText("");
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+        name3.setText("");
+        maxLevel3.setText("");
+        capacity3.setText("");
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        JFileChooser army = new JFileChooser();
+        army.showOpenDialog(null);
+        File f = army.getSelectedFile();
+        String filename = f.getName();
+        name3.setText(filename);
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3314,10 +3548,10 @@ public class JSon extends javax.swing.JFrame {
     private javax.swing.JTextField capTH;
     private javax.swing.JTextField capacity1;
     private javax.swing.JTextField capacity2;
+    private javax.swing.JTextField capacity3;
     private javax.swing.JList<String> capacityList1;
     private javax.swing.JList<String> capacityList2;
     private javax.swing.JList<String> capacityList3;
-    private javax.swing.JList<String> capacityList4;
     private javax.swing.JTextField catchUpPointRes;
     private javax.swing.JTextField damageAttackArmy;
     private javax.swing.JTextField damageDef;
@@ -3349,10 +3583,13 @@ public class JSon extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton3;
@@ -3372,13 +3609,10 @@ public class JSon extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
-    private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
-    private javax.swing.JLabel jLabel112;
-    private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel114;
     private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel116;
@@ -3462,7 +3696,12 @@ public class JSon extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel9;
@@ -3487,17 +3726,20 @@ public class JSon extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane20;
     private javax.swing.JScrollPane jScrollPane21;
     private javax.swing.JScrollPane jScrollPane22;
     private javax.swing.JScrollPane jScrollPane23;
+    private javax.swing.JScrollPane jScrollPane24;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
@@ -3507,16 +3749,22 @@ public class JSon extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> levelArmy;
     private javax.swing.JTextField maxLevel1;
     private javax.swing.JTextField maxLevel2;
+    private javax.swing.JTextField maxLevel3;
+    private javax.swing.JList<String> maxLevelList1;
+    private javax.swing.JList<String> maxLevelList2;
+    private javax.swing.JList<String> maxLevelList3;
     private javax.swing.JTextField maximumNumberOfBuildAvailable;
     private javax.swing.JTextField maximumUnitAr;
     private javax.swing.JTextField movementSpeedArmy;
     private javax.swing.JTextField name1;
     private javax.swing.JTextField name2;
+    private javax.swing.JTextField name3;
     private javax.swing.JTextField nameAr;
     private javax.swing.JTextField nameArmy;
     private javax.swing.JTextField nameDef;
     private javax.swing.JList<String> nameList1;
     private javax.swing.JList<String> nameList2;
+    private javax.swing.JList<String> nameList3;
     private javax.swing.JTextField nameRes;
     private javax.swing.JTextField nameRes1;
     private javax.swing.JTextField pCapacityRes;
