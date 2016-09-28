@@ -55,7 +55,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jTabbedPane1" min="-2" pref="580" max="-2" attributes="0"/>
-                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1544,7 +1544,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jPanel10" alignment="0" pref="904" max="32767" attributes="0"/>
+                                      <Component id="jPanel10" alignment="0" pref="898" max="32767" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -1655,7 +1655,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTabbedPane4" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTabbedPane4" pref="255" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>

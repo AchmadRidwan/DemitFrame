@@ -81,94 +81,55 @@ public class JSon extends javax.swing.JFrame {
         boolean success;
         if(!dataexist) {
             success = (new File(currentPathString + "/unit kategory")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create directory");
-            }
+            
         }
         if(!buildingsExist) {
             success = (new File(currentPathString + "/unit kategory/buildings")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create directory");
-            }
+            
         }
         if(!armyExist){
             success = (new File(currentPathString + "/unit kategory/army")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/army");
-            }
+            
         }
         if(!resourceExist) {
             success = (new File(currentPathString + "/unit kategory/buildings/resource")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/resource");
-            }
+            
         }
         if(!defensesExist) {
             success = (new File(currentPathString + "/unit kategory/buildings/defenses")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/defenses");
-            }
+            
         }
         if(!armybuildExist) {
             success = (new File(currentPathString + "/unit kategory/buildings/army buildings")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/army buildings");
-            }
+            
         }
         if(!reStorageExist) {
             success = (new File(currentPathString + "/unit kategory/buildings/resource/storage")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/resource/storage");
-            }
+            
         }
         if(!reProdusenExist) {
             success = (new File(currentPathString + "/unit kategory/buildings/resource/produsen")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/resource/produsen");
-            }
+            
         }
         if(!rePusatExist) {
             success = (new File(currentPathString + "/unit kategory/buildings/resource/pusat")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/resource/pusat");
-            }
+            
         }
         if(!armyStorageExist) {
             success = (new File(currentPathString + "/unit kategory/army/storage")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/army/storage");
-            }
+            
         }
         if(!armyProdusenExist) {
             success = (new File(currentPathString + "/unit kategory/army/produsen")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/army/produsen");
-            }
+            
         }
         if(!buildingsDefExist) {
             success = (new File(currentPathString + "/unit kategory/buildings/defenses/buildings")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/defenses/buildings");
-            }
+            
         }
         if(!trapsDefExist) {
             success = (new File(currentPathString + "/unit kategory/buildings/defenses/traps")).mkdirs();
-            if (!success) {
-                // Directory creation failed
-                JOptionPane.showMessageDialog(this, "unable to create /unit kategory/buildings/defenses/traps");
-            }
+            
         }
     }
     
