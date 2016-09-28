@@ -2523,6 +2523,8 @@ public class JSon extends javax.swing.JFrame {
         }
 
         String dir = System.getProperty("user.dir");
+        Path currentRelativePath = Paths.get("");
+        dir = currentRelativePath.toAbsolutePath().toString();
         File fa = new File(dir+"\\unit kategory\\buildings\\resource\\produsen\\"+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
@@ -2599,6 +2601,8 @@ public class JSon extends javax.swing.JFrame {
         }
 
         String dir = System.getProperty("user.dir");
+        Path currentRelativePath = Paths.get("");
+        dir = currentRelativePath.toAbsolutePath().toString();
         File fa = new File(dir+"\\unit kategory\\buildings\\resource\\storage\\"+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
@@ -2712,6 +2716,8 @@ public class JSon extends javax.swing.JFrame {
         }
 
         String dir = System.getProperty("user.dir");
+        Path currentRelativePath = Paths.get("");
+        dir = currentRelativePath.toAbsolutePath().toString();
         File fa = new File(dir+"\\unit kategory\\buildings\\defenses\\buildings\\"+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
@@ -2821,6 +2827,8 @@ public class JSon extends javax.swing.JFrame {
         }
 
         String dir = System.getProperty("user.dir");
+        Path currentRelativePath = Paths.get("");
+        dir = currentRelativePath.toAbsolutePath().toString();
         File fa = new File(dir+"\\unit kategory\\buildings\\defenses\\traps\\"+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
@@ -2889,6 +2897,8 @@ public class JSon extends javax.swing.JFrame {
         int maximumUnit = getInt(maximumUnitAr);
 
         String dir = System.getProperty("user.dir");
+        Path currentRelativePath = Paths.get("");
+        dir = currentRelativePath.toAbsolutePath().toString();
         File fa = new File(dir+"\\unit kategory\\buildings\\army buildings\\produsen\\"+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
@@ -2966,6 +2976,8 @@ public class JSon extends javax.swing.JFrame {
         int troopsCapacity = getInt(troopCapacityAr);
 
         String dir = System.getProperty("user.dir");
+        Path currentRelativePath = Paths.get("");
+        dir = currentRelativePath.toAbsolutePath().toString();
         File fa = new File(dir+"\\unit kategory\\buildings\\army buildings\\produsen\\"+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
@@ -3050,6 +3062,8 @@ public class JSon extends javax.swing.JFrame {
         int unitType = getInt(unitTypeArmy);
 
         String dir = System.getProperty("user.dir");
+        Path currentRelativePath = Paths.get("");
+        dir = currentRelativePath.toAbsolutePath().toString();
         File fa = new File(dir+"\\unit kategory\\army\\"+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
@@ -3093,7 +3107,7 @@ public class JSon extends javax.swing.JFrame {
                     e.printStackTrace();
                 }
     }//GEN-LAST:event_jButton7ActionPerformed
- int  damage,speed,hasil ;
+ int damage,speed,hasil ;
  int damageD,speedDef,hasilDef ;
     private void damageAttackArmyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_damageAttackArmyFocusLost
         // TODO add your handling code here:
@@ -3225,7 +3239,10 @@ public class JSon extends javax.swing.JFrame {
         }
 
         String dir = System.getProperty("user.dir");
+        Path currentRelativePath = Paths.get("");
+        dir = currentRelativePath.toAbsolutePath().toString();
         File fa = new File(dir+"\\unit kategory\\buildings\\resource\\pusat\\"+unitType+"-"+sName+"-"+iLevel+".json");
+        System.out.println(fa);
 
             if(fa.exists()){
                 int Ex = JOptionPane.showConfirmDialog(this, "Timpa file?");
