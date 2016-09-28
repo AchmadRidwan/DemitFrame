@@ -13,8 +13,6 @@ import javax.swing.JTextField;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import javax.swing.*;
 //import java.io.File;
@@ -64,9 +62,6 @@ public class Application extends javax.swing.JFrame {
 
     
     public void checkFolder(){
-        Path currentRelativePath = Paths.get("");
-        String currentPathString = currentRelativePath.toAbsolutePath().toString();
-        //System.out.println("Current relative path is: " + s);
         
         File dataFile = new File(kategoryPath);
         boolean dataexist = dataFile.exists();
@@ -74,11 +69,6 @@ public class Application extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(this, "buatlah folder kategory dan isi folder kategory terlebih dahulu");
             System.exit(0);
-            boolean success = (new File(currentPathString + "unit kategory")).mkdirs();
-            if (!success) {
-            // Directory creation failed
-            JOptionPane.showMessageDialog(this, "unable to create directory");
-            }
         }            
         File buildingsFile = new File(buildingsPath);
         boolean buildingsExist = buildingsFile.exists();

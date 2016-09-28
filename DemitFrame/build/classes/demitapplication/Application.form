@@ -242,7 +242,7 @@
                                           <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="pTownHallLevelReqRes" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="71" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
@@ -642,7 +642,7 @@
                                           <Component id="jLabel73" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="goldAvailableRes" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="15" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel74" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="elixirAvailableRes" alignment="3" min="-2" max="-2" attributes="0"/>
