@@ -16,6 +16,10 @@
     1
   ],
   "nameFile2": [
+<<<<<<< HEAD
+=======
+    "zz",
+>>>>>>> master
     "zz"
   ],
   "capacity2": [
@@ -24,9 +28,13 @@
   "maxLevel2": [
     1
   ],
+<<<<<<< HEAD
   "nameFile3": [
     "zz"
   ],
+=======
+  "nameFile3": [],
+>>>>>>> master
   "capacity3": [
     1
   ],

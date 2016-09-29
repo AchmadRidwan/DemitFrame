@@ -2023,21 +2023,51 @@ public class JSon extends javax.swing.JFrame {
         jTabbedPane3.addTab("Town Hall", jPanel23);
 
         nameList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        nameList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "zz" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane21.setViewportView(nameList1);
 
         capacityList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        capacityList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane22.setViewportView(capacityList1);
 
         nameList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        nameList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "zz" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane23.setViewportView(nameList2);
 
         capacityList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        capacityList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane6.setViewportView(capacityList2);
 
         maxLevelList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevelList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane7.setViewportView(maxLevelList2);
 
         maxLevelList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevelList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane8.setViewportView(maxLevelList1);
 
         jLabel75.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2059,12 +2089,27 @@ public class JSon extends javax.swing.JFrame {
         jLabel80.setText("Name File");
 
         nameList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        nameList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "zz" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane24.setViewportView(nameList3);
 
         maxLevelList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevelList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane9.setViewportView(maxLevelList3);
 
         capacityList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        capacityList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane10.setViewportView(capacityList3);
 
         jLabel81.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -3470,19 +3515,31 @@ public class JSon extends javax.swing.JFrame {
             
             jo.addProperty("description", sDescription);
         
+<<<<<<< HEAD
             Path currentRelativePath = Paths.get("");
             String currentPathString = currentRelativePath.toAbsolutePath().toString();
 
             try {
                 String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"pusat"+s+unitType+"-"+sName+"-"+iLevel+".json");
+=======
+            Path currentRelativePath = Paths.get(".");
+            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+
+            try {
+                FileWriter file = new FileWriter(currentPathString+"\\unit kategory\\buildings\\resource\\pusat\\"+unitType+"-"+sName+"-"+iLevel+".json");
+>>>>>>> master
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
                     file.close();
                     System.out.println(json);
                 } catch (IOException e) {
+<<<<<<< HEAD
                     JOptionPane.showMessageDialog(this, "Gagal membuat file!");
+=======
+                    JOptionPane.showMessageDialog(this, "Anda salah mengisi data silahkan isi kembali");
+>>>>>>> master
                     e.printStackTrace();
                 }
             nameModel1.clear();

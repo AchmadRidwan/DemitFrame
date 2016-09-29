@@ -6,6 +6,7 @@
   "buildCost": 1,
   "buildTime": 1.0,
   "experienceGained": 1,
+<<<<<<< HEAD
   "nameFile1": [
     "zz"
   ],
@@ -33,5 +34,16 @@
   "maxLevel3": [
     1
   ],
+=======
+  "nameFile1": [],
+  "capacity1": [],
+  "maxLevel1": [],
+  "nameFile2": [],
+  "capacity2": [],
+  "maxLevel2": [],
+  "nameFile3": [],
+  "capacity3": [],
+  "maxLevel3": [],
+>>>>>>> master
   "description": "sad"
 }
