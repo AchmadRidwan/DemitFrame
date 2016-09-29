@@ -614,7 +614,7 @@ public class JSon extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(boostCostRes)
                             .addComponent(pLevelRes, 0, 50, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 212, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13)
                     .addComponent(jLabel12)
@@ -652,7 +652,7 @@ public class JSon extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(productionRateRes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -699,7 +699,7 @@ public class JSon extends javax.swing.JFrame {
                     .addComponent(sCapacityRes, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sLevelRes, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sTownHallLevelReqRes, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(565, Short.MAX_VALUE))
+                .addContainerGap(563, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3)
@@ -929,7 +929,7 @@ public class JSon extends javax.swing.JFrame {
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addComponent(bTownHallLevelReqDef, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 474, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 469, Short.MAX_VALUE)
                                 .addComponent(jButton2))
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1068,7 +1068,7 @@ public class JSon extends javax.swing.JFrame {
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tLevelDef, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(reArmCostDef, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 208, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel36)
                             .addComponent(jLabel37))
@@ -1334,10 +1334,10 @@ public class JSon extends javax.swing.JFrame {
                         .addComponent(jLabel45)
                         .addGap(254, 254, 254)
                         .addComponent(pLevelAr, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(jLabel82, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                        .addComponent(jLabel82, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                         .addGap(189, 189, 189))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1444,7 +1444,7 @@ public class JSon extends javax.swing.JFrame {
                         .addComponent(jLabel49)
                         .addGap(228, 228, 228)
                         .addComponent(sLevelAr, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(557, Short.MAX_VALUE))
+                .addContainerGap(554, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton6)
@@ -1465,7 +1465,7 @@ public class JSon extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel51)
                     .addComponent(sTownHallLevelReqAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addGap(25, 25, 25))
         );
@@ -1485,7 +1485,7 @@ public class JSon extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane4)
+                .addComponent(jTabbedPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 255, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1597,7 +1597,7 @@ public class JSon extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
                     .addComponent(nameAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -1771,7 +1771,7 @@ public class JSon extends javax.swing.JFrame {
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(trainingTimeArmy, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(housingSpaceArmy, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addComponent(jLabel65)
@@ -1996,27 +1996,57 @@ public class JSon extends javax.swing.JFrame {
                     .addComponent(jLabel103)
                     .addComponent(darkElixirAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton12))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Town Hall", jPanel23);
 
         nameList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        nameList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "zz" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane21.setViewportView(nameList1);
 
         capacityList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        capacityList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane22.setViewportView(capacityList1);
 
         nameList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        nameList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "zz" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane23.setViewportView(nameList2);
 
         capacityList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        capacityList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane6.setViewportView(capacityList2);
 
         maxLevelList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevelList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane7.setViewportView(maxLevelList2);
 
         maxLevelList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevelList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane8.setViewportView(maxLevelList1);
 
         jLabel75.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2038,12 +2068,27 @@ public class JSon extends javax.swing.JFrame {
         jLabel80.setText("Name File");
 
         nameList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        nameList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "zz" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane24.setViewportView(nameList3);
 
         maxLevelList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevelList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane9.setViewportView(maxLevelList3);
 
         capacityList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        capacityList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane10.setViewportView(capacityList3);
 
         jLabel81.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2194,7 +2239,7 @@ public class JSon extends javax.swing.JFrame {
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel85)
                             .addComponent(jLabel86))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel121)
                             .addComponent(jLabel109))
@@ -2228,7 +2273,7 @@ public class JSon extends javax.swing.JFrame {
                             .addComponent(jLabel108)
                             .addComponent(jLabel112)
                             .addComponent(jLabel86))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Town Hall Available", jPanel24);
@@ -2524,7 +2569,7 @@ public class JSon extends javax.swing.JFrame {
                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel119)
                             .addComponent(nameRes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel73)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2579,7 +2624,7 @@ public class JSon extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -2587,7 +2632,7 @@ public class JSon extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -3390,68 +3435,72 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("experienceGained", storageAmount);
             JsonArray namefile1 = new JsonArray();
             for ( int a = 0; a < nameCp1; a++ ){
-                namefile1.add(new JsonPrimitive(nameList1.getModel().getElementAt(a).toString()));
+                namefile1.add(new JsonPrimitive(nameList1.getModel().getElementAt(a)));
             }
             jo.add("nameFile1", namefile1);
             
             JsonArray capacityLs1 = new JsonArray();
             for ( int a = 0; a < nameCp1; a++ ){
-                capacityLs1.add(new JsonPrimitive(capacityList1.getModel().getElementAt(a).toString()));
+                capacityLs1.add(new JsonPrimitive(Integer.parseInt(capacityList1.getModel().getElementAt(a))));
             }
             jo.add("capacity1", capacityLs1);
             
             JsonArray maxLevel1 = new JsonArray();
             for ( int a = 0; a < nameCp1; a++ ){
-                maxLevel1.add(new JsonPrimitive(maxLevelList1.getModel().getElementAt(a).toString()));
+                maxLevel1.add(new JsonPrimitive(Integer.parseInt(maxLevelList1.getModel().getElementAt(a))));
             }
             jo.add("maxLevel1", maxLevel1);
             
             JsonArray namefile2 = new JsonArray();
             for ( int b = 0; b < nameCp2; b++ ){
-                namefile2.add(new JsonPrimitive(nameList2.getModel().getElementAt(b).toString()));
+                namefile2.add(new JsonPrimitive(nameList2.getModel().getElementAt(b)));
             }
             jo.add("nameFile2", namefile2);
             
             JsonArray capacityLs2 = new JsonArray();
-            for ( int a = 0; a < nameCp1; a++ ){
-                capacityLs2.add(new JsonPrimitive(capacityList2.getModel().getElementAt(a).toString()));
+            for ( int a = 0; a < nameCp2; a++ ){
+                capacityLs2.add(new JsonPrimitive(Integer.parseInt(capacityList2.getModel().getElementAt(a))));
             }
             jo.add("capacity2", capacityLs2);
             
             JsonArray maxLevel2 = new JsonArray();
-            for ( int a = 0; a < nameCp1; a++ ){
-                maxLevel2.add(new JsonPrimitive(maxLevelList2.getModel().getElementAt(a).toString()));
+            for ( int a = 0; a < nameCp2; a++ ){
+                maxLevel2.add(new JsonPrimitive(Integer.parseInt(maxLevelList2.getModel().getElementAt(a))));
             }
             jo.add("maxLevel2", maxLevel2);
             
             JsonArray namefile3 = new JsonArray();
-            for ( int b = 0; b < nameCp2; b++ ){
-                namefile2.add(new JsonPrimitive(nameList2.getModel().getElementAt(b).toString()));
+            for ( int b = 0; b < nameCp3; b++ ){
+                namefile3.add(new JsonPrimitive(nameList2.getModel().getElementAt(b)));
             }
             jo.add("nameFile3", namefile3);
             
             JsonArray capacityLs3 = new JsonArray();
-            for ( int a = 0; a < nameCp1; a++ ){
-                capacityLs3.add(new JsonPrimitive(capacityList3.getModel().getElementAt(a).toString()));
+            for ( int a = 0; a < nameCp3; a++ ){
+                capacityLs3.add(new JsonPrimitive(Integer.parseInt(capacityList3.getModel().getElementAt(a))));
             }
             jo.add("capacity3", capacityLs3);
             
             JsonArray maxLevel3 = new JsonArray();
-            for ( int a = 0; a < nameCp1; a++ ){
-                maxLevel3.add(new JsonPrimitive(maxLevelList3.getModel().getElementAt(a).toString()));
+            for ( int a = 0; a < nameCp3; a++ ){
+                maxLevel3.add(new JsonPrimitive(Integer.parseInt(maxLevelList3.getModel().getElementAt(a))));
             }
             jo.add("maxLevel3", maxLevel3);
             
             jo.addProperty("description", sDescription);
+        
+            Path currentRelativePath = Paths.get(".");
+            String currentPathString = currentRelativePath.toAbsolutePath().toString();
 
             try {
-                FileWriter file = new FileWriter(dir+"\\unit kategory\\buildings\\resource\\pusat\\"+unitType+"-"+sName+"-"+iLevel+".json");
+                FileWriter file = new FileWriter(currentPathString+"\\unit kategory\\buildings\\resource\\pusat\\"+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
                     file.close();
                     System.out.println(json);
                 } catch (IOException e) {
+                    JOptionPane.showMessageDialog(this, "Anda salah mengisi data silahkan isi kembali");
                     e.printStackTrace();
                 }
             nameModel1.clear();
