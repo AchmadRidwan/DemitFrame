@@ -3515,23 +3515,33 @@ public class JSon extends javax.swing.JFrame {
             
             jo.addProperty("description", sDescription);
         
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/mbalDemit
             Path currentRelativePath = Paths.get("");
             String currentPathString = currentRelativePath.toAbsolutePath().toString();
 
             try {
                 String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"pusat"+s+unitType+"-"+sName+"-"+iLevel+".json");
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/mbalDemit
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
                     file.close();
                     System.out.println(json);
                 } catch (IOException e) {
+<<<<<<< HEAD
 
                     JOptionPane.showMessageDialog(this, "Gagal membuat file!");
 
+=======
+                    JOptionPane.showMessageDialog(this, "Gagal membuat file!");
+>>>>>>> refs/remotes/origin/mbalDemit
                     e.printStackTrace();
                 }
             nameModel1.clear();
