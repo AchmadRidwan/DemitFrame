@@ -1,0 +1,49 @@
+{
+  "unitType": 1,
+  "name": "aa",
+  "level": 1,
+  "maxHitpoint": 1.0,
+  "buildCost": 1,
+  "buildTime": 1.0,
+  "experienceGained": 1,
+<<<<<<< HEAD
+  "nameFile1": [
+    "zz"
+  ],
+  "capacity1": [
+    1
+  ],
+  "maxLevel1": [
+    1
+  ],
+  "nameFile2": [
+    "zz"
+  ],
+  "capacity2": [
+    1
+  ],
+  "maxLevel2": [
+    1
+  ],
+  "nameFile3": [
+    "zz"
+  ],
+  "capacity3": [
+    1
+  ],
+  "maxLevel3": [
+    1
+  ],
+=======
+  "nameFile1": [],
+  "capacity1": [],
+  "maxLevel1": [],
+  "nameFile2": [],
+  "capacity2": [],
+  "maxLevel2": [],
+  "nameFile3": [],
+  "capacity3": [],
+  "maxLevel3": [],
+>>>>>>> master
+  "description": "sad"
+}
