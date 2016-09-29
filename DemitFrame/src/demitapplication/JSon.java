@@ -47,6 +47,7 @@ public class JSon extends javax.swing.JFrame {
         
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        String s = File.separator;
         //System.out.println("Current relative path is: " + s);
         
         File dataFile = new File(kategoryPath);            
@@ -77,13 +78,15 @@ public class JSon extends javax.swing.JFrame {
         boolean buildingsDefExist = buildingsDefFile.exists();
         boolean trapsDefExist = trapsDefFile.exists();
         
+        
+        
         boolean success;
         if(!dataexist) {
-            success = (new File(currentPathString + "/unit kategory")).mkdirs();
+            success = (new File(currentPathString + s + "unit kategory")).mkdirs();
             
         }
         if(!buildingsExist) {
-            success = (new File(currentPathString + "/unit kategory/buildings")).mkdirs();
+            success = (new File(currentPathString + s + "unit kategory" + s + "buildings")).mkdirs();
             
         }
         if(!armyExist){
@@ -130,6 +133,25 @@ public class JSon extends javax.swing.JFrame {
             success = (new File(currentPathString + "/unit kategory/buildings/defenses/traps")).mkdirs();
             
         }
+    }
+    
+//        private void checkFile(boolean fileExists)
+//        {
+//            Path currentRelativePath = Paths.get("");
+//            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+//            String s = File.separator;
+//            boolean success;
+//            String fileDir = "";
+//            if (fileExists)
+//            {
+//                fileDir = "";
+//                success = (new File(currentPathString + fileDir)).mkdirs();
+//                if (!success)
+//                {
+//                    JOptionPane.showMessageDialog(this, "Failed to make directory");
+//                }
+//            }
+//        }
         
 //        File dataFile = new File(kategoryPath);
 //        boolean dataexist = dataFile.exists();
@@ -222,7 +244,6 @@ public class JSon extends javax.swing.JFrame {
 //            JOptionPane.showMessageDialog(this, "buatlah folder (traps) di dalam folder (defenses)");
 //            System.exit(0);
 //        }
-    }
     
     public int getInt(JTextField f){
         String s = f.getText();
@@ -2002,51 +2023,21 @@ public class JSon extends javax.swing.JFrame {
         jTabbedPane3.addTab("Town Hall", jPanel23);
 
         nameList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        nameList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "zz" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane21.setViewportView(nameList1);
 
         capacityList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        capacityList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane22.setViewportView(capacityList1);
 
         nameList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        nameList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "zz" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane23.setViewportView(nameList2);
 
         capacityList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        capacityList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane6.setViewportView(capacityList2);
 
         maxLevelList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        maxLevelList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane7.setViewportView(maxLevelList2);
 
         maxLevelList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        maxLevelList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane8.setViewportView(maxLevelList1);
 
         jLabel75.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2068,27 +2059,12 @@ public class JSon extends javax.swing.JFrame {
         jLabel80.setText("Name File");
 
         nameList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        nameList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "zz" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane24.setViewportView(nameList3);
 
         maxLevelList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        maxLevelList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane9.setViewportView(maxLevelList3);
 
         capacityList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        capacityList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane10.setViewportView(capacityList3);
 
         jLabel81.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2320,7 +2296,6 @@ public class JSon extends javax.swing.JFrame {
         unitTypeRes1.setText("1");
 
         nameRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        nameRes1.setText("aa");
 
         hitpointRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         hitpointRes1.setText("1");
@@ -2337,7 +2312,7 @@ public class JSon extends javax.swing.JFrame {
         descriptionRes1.setColumns(20);
         descriptionRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         descriptionRes1.setRows(5);
-        descriptionRes1.setText("sad");
+        descriptionRes1.setText("Add a description.");
         jScrollPane3.setViewportView(descriptionRes1);
 
         capacity1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2395,11 +2370,14 @@ public class JSon extends javax.swing.JFrame {
         });
 
         name1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        name1.setText("11-zz");
         name1.setEnabled(false);
+        name1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                name1ActionPerformed(evt);
+            }
+        });
 
         name2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        name2.setText("11-zz");
         name2.setEnabled(false);
 
         jLabel71.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2409,8 +2387,11 @@ public class JSon extends javax.swing.JFrame {
         jLabel72.setText("Capacity");
 
         maxLevel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevel1.setText("1");
+        maxLevel1.setToolTipText("");
 
         maxLevel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevel2.setText("1");
 
         jLabel73.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel73.setText("MAX");
@@ -2419,10 +2400,10 @@ public class JSon extends javax.swing.JFrame {
         jLabel74.setText("Level");
 
         name3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        name3.setText("11-zz");
         name3.setEnabled(false);
 
         maxLevel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevel3.setText("1");
 
         capacity3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         capacity3.setText("1");
@@ -3489,18 +3470,19 @@ public class JSon extends javax.swing.JFrame {
             
             jo.addProperty("description", sDescription);
         
-            Path currentRelativePath = Paths.get(".");
+            Path currentRelativePath = Paths.get("");
             String currentPathString = currentRelativePath.toAbsolutePath().toString();
 
             try {
-                FileWriter file = new FileWriter(currentPathString+"\\unit kategory\\buildings\\resource\\pusat\\"+unitType+"-"+sName+"-"+iLevel+".json");
+                String s = File.separator;
+                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"pusat"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
                     file.close();
                     System.out.println(json);
                 } catch (IOException e) {
-                    JOptionPane.showMessageDialog(this, "Anda salah mengisi data silahkan isi kembali");
+                    JOptionPane.showMessageDialog(this, "Gagal membuat file!");
                     e.printStackTrace();
                 }
             nameModel1.clear();
@@ -3664,6 +3646,10 @@ public class JSon extends javax.swing.JFrame {
         String filename = f.getName();
         name3.setText(filename);
     }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void name1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_name1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_name1ActionPerformed
 
     /**
      * @param args the command line arguments
