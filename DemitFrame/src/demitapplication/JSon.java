@@ -47,6 +47,7 @@ public class JSon extends javax.swing.JFrame {
         
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        String s = File.separator;
         //System.out.println("Current relative path is: " + s);
         
         File dataFile = new File(kategoryPath);            
@@ -77,13 +78,15 @@ public class JSon extends javax.swing.JFrame {
         boolean buildingsDefExist = buildingsDefFile.exists();
         boolean trapsDefExist = trapsDefFile.exists();
         
+        
+        
         boolean success;
         if(!dataexist) {
-            success = (new File(currentPathString + "/unit kategory")).mkdirs();
+            success = (new File(currentPathString + s + "unit kategory")).mkdirs();
             
         }
         if(!buildingsExist) {
-            success = (new File(currentPathString + "/unit kategory/buildings")).mkdirs();
+            success = (new File(currentPathString + s + "unit kategory" + s + "buildings")).mkdirs();
             
         }
         if(!armyExist){
@@ -130,6 +133,25 @@ public class JSon extends javax.swing.JFrame {
             success = (new File(currentPathString + "/unit kategory/buildings/defenses/traps")).mkdirs();
             
         }
+    }
+    
+//        private void checkFile(boolean fileExists)
+//        {
+//            Path currentRelativePath = Paths.get("");
+//            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+//            String s = File.separator;
+//            boolean success;
+//            String fileDir = "";
+//            if (fileExists)
+//            {
+//                fileDir = "";
+//                success = (new File(currentPathString + fileDir)).mkdirs();
+//                if (!success)
+//                {
+//                    JOptionPane.showMessageDialog(this, "Failed to make directory");
+//                }
+//            }
+//        }
         
 //        File dataFile = new File(kategoryPath);
 //        boolean dataexist = dataFile.exists();
@@ -222,7 +244,6 @@ public class JSon extends javax.swing.JFrame {
 //            JOptionPane.showMessageDialog(this, "buatlah folder (traps) di dalam folder (defenses)");
 //            System.exit(0);
 //        }
-    }
     
     public int getInt(JTextField f){
         String s = f.getText();
@@ -2320,7 +2341,6 @@ public class JSon extends javax.swing.JFrame {
         unitTypeRes1.setText("1");
 
         nameRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        nameRes1.setText("aa");
 
         hitpointRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         hitpointRes1.setText("1");
@@ -2337,7 +2357,7 @@ public class JSon extends javax.swing.JFrame {
         descriptionRes1.setColumns(20);
         descriptionRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         descriptionRes1.setRows(5);
-        descriptionRes1.setText("sad");
+        descriptionRes1.setText("Add a description.");
         jScrollPane3.setViewportView(descriptionRes1);
 
         capacity1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2395,11 +2415,14 @@ public class JSon extends javax.swing.JFrame {
         });
 
         name1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        name1.setText("11-zz");
         name1.setEnabled(false);
+        name1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                name1ActionPerformed(evt);
+            }
+        });
 
         name2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        name2.setText("11-zz");
         name2.setEnabled(false);
 
         jLabel71.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2409,8 +2432,11 @@ public class JSon extends javax.swing.JFrame {
         jLabel72.setText("Capacity");
 
         maxLevel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevel1.setText("1");
+        maxLevel1.setToolTipText("");
 
         maxLevel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevel2.setText("1");
 
         jLabel73.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel73.setText("MAX");
@@ -2419,10 +2445,10 @@ public class JSon extends javax.swing.JFrame {
         jLabel74.setText("Level");
 
         name3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        name3.setText("11-zz");
         name3.setEnabled(false);
 
         maxLevel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        maxLevel3.setText("1");
 
         capacity3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         capacity3.setText("1");
@@ -3489,18 +3515,31 @@ public class JSon extends javax.swing.JFrame {
             
             jo.addProperty("description", sDescription);
         
+<<<<<<< HEAD
+            Path currentRelativePath = Paths.get("");
+            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+
+            try {
+                String s = File.separator;
+                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"pusat"+s+unitType+"-"+sName+"-"+iLevel+".json");
+=======
             Path currentRelativePath = Paths.get(".");
             String currentPathString = currentRelativePath.toAbsolutePath().toString();
 
             try {
                 FileWriter file = new FileWriter(currentPathString+"\\unit kategory\\buildings\\resource\\pusat\\"+unitType+"-"+sName+"-"+iLevel+".json");
+>>>>>>> master
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
                     file.close();
                     System.out.println(json);
                 } catch (IOException e) {
+<<<<<<< HEAD
+                    JOptionPane.showMessageDialog(this, "Gagal membuat file!");
+=======
                     JOptionPane.showMessageDialog(this, "Anda salah mengisi data silahkan isi kembali");
+>>>>>>> master
                     e.printStackTrace();
                 }
             nameModel1.clear();
@@ -3664,6 +3703,10 @@ public class JSon extends javax.swing.JFrame {
         String filename = f.getName();
         name3.setText(filename);
     }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void name1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_name1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_name1ActionPerformed
 
     /**
      * @param args the command line arguments
