@@ -90,47 +90,47 @@ public class JSon extends javax.swing.JFrame {
             
         }
         if(!armyExist){
-            success = (new File(currentPathString + "/unit kategory/army")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "army")).mkdirs();
             
         }
         if(!resourceExist) {
-            success = (new File(currentPathString + "/unit kategory/buildings/resource")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "buildings" + s + "resource")).mkdirs();
             
         }
         if(!defensesExist) {
-            success = (new File(currentPathString + "/unit kategory/buildings/defenses")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "buildings" + s + "defenses")).mkdirs();
             
         }
         if(!armybuildExist) {
-            success = (new File(currentPathString + "/unit kategory/buildings/army buildings")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "buildings" + s + "army buildings")).mkdirs();
             
         }
         if(!reStorageExist) {
-            success = (new File(currentPathString + "/unit kategory/buildings/resource/storage")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "buildings" + s + "resource" + s + "storage")).mkdirs();
             
         }
         if(!reProdusenExist) {
-            success = (new File(currentPathString + "/unit kategory/buildings/resource/produsen")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "buildings" + s + "resource" + s + "produsen")).mkdirs();
             
         }
         if(!rePusatExist) {
-            success = (new File(currentPathString + "/unit kategory/buildings/resource/pusat")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "buildings" + s + "resource" + s + "pusat")).mkdirs();
             
         }
         if(!armyStorageExist) {
-            success = (new File(currentPathString + "/unit kategory/army/storage")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "army" + s + "storage")).mkdirs();
             
         }
         if(!armyProdusenExist) {
-            success = (new File(currentPathString + "/unit kategory/army/produsen")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "army" + s + "produsen")).mkdirs();
             
         }
         if(!buildingsDefExist) {
-            success = (new File(currentPathString + "/unit kategory/buildings/defenses/buildings")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "buildings" + s + "defenses" + s + "buildings")).mkdirs();
             
         }
         if(!trapsDefExist) {
-            success = (new File(currentPathString + "/unit kategory/buildings/defenses/traps")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "buildings" + s + "defenses" + s + "traps")).mkdirs();
             
         }
     }
@@ -3515,31 +3515,23 @@ public class JSon extends javax.swing.JFrame {
             
             jo.addProperty("description", sDescription);
         
-<<<<<<< HEAD
+
             Path currentRelativePath = Paths.get("");
             String currentPathString = currentRelativePath.toAbsolutePath().toString();
 
             try {
                 String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"pusat"+s+unitType+"-"+sName+"-"+iLevel+".json");
-=======
-            Path currentRelativePath = Paths.get(".");
-            String currentPathString = currentRelativePath.toAbsolutePath().toString();
 
-            try {
-                FileWriter file = new FileWriter(currentPathString+"\\unit kategory\\buildings\\resource\\pusat\\"+unitType+"-"+sName+"-"+iLevel+".json");
->>>>>>> master
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
                     file.close();
                     System.out.println(json);
                 } catch (IOException e) {
-<<<<<<< HEAD
+
                     JOptionPane.showMessageDialog(this, "Gagal membuat file!");
-=======
-                    JOptionPane.showMessageDialog(this, "Anda salah mengisi data silahkan isi kembali");
->>>>>>> master
+
                     e.printStackTrace();
                 }
             nameModel1.clear();

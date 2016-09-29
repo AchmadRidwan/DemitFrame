@@ -1,6 +1,6 @@
 {
   "unitType": 1,
-  "name": "aa",
+  "name": "sadis",
   "level": 1,
   "maxHitpoint": 1.0,
   "buildCost": 1,
@@ -16,10 +16,6 @@
     1
   ],
   "nameFile2": [
-<<<<<<< HEAD
-=======
-    "zz",
->>>>>>> master
     "zz"
   ],
   "capacity2": [
@@ -28,18 +24,14 @@
   "maxLevel2": [
     1
   ],
-<<<<<<< HEAD
   "nameFile3": [
     "zz"
   ],
-=======
-  "nameFile3": [],
->>>>>>> master
   "capacity3": [
     1
   ],
   "maxLevel3": [
     1
   ],
-  "description": "sad"
+  "description": "Add a description."
 }
