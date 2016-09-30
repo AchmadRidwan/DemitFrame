@@ -3466,10 +3466,15 @@ public class JSon extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-      
-        JFileChooser army = new JFileChooser();
+       Path currentRelativePath = Paths.get("");
+        String currentPathString = currentRelativePath.toAbsolutePath().toString();        
+        String s = File.separator;
+        JFileChooser army = new JFileChooser(currentPathString+s+"unit kategory"+s+"army");
         army.showOpenDialog(null);
         File f = army.getSelectedFile();
+        if (f == null) {
+        return;
+        }
         String filename = f.getName();
         armyName.setText(filename);
     }//GEN-LAST:event_jButton9ActionPerformed
@@ -3718,6 +3723,9 @@ public class JSon extends javax.swing.JFrame {
         JFileChooser army = new JFileChooser(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource");
         army.showOpenDialog(null);
         File f = army.getSelectedFile();
+        if (f == null) {
+        return;
+        }
         String filename = f.getName();
         name1.setText(filename);
     }//GEN-LAST:event_jButton10ActionPerformed
@@ -3730,6 +3738,9 @@ public class JSon extends javax.swing.JFrame {
         JFileChooser army = new JFileChooser(currentPathString+s+"unit kategory"+s+"buildings"+s+"defenses");
         army.showOpenDialog(null);
         File f = army.getSelectedFile();
+        if (f == null) {
+        return;
+        }
         String filename = f.getName();
         name2.setText(filename);
     }//GEN-LAST:event_jButton15ActionPerformed
@@ -3797,6 +3808,9 @@ public class JSon extends javax.swing.JFrame {
         JFileChooser army = new JFileChooser(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings");
         army.showOpenDialog(null);
         File f = army.getSelectedFile();
+        if (f == null) {
+        return;
+        }
         String filename = f.getName();
         name3.setText(filename);
     }//GEN-LAST:event_jButton16ActionPerformed
