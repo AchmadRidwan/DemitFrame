@@ -2671,7 +2671,6 @@ public class JSon extends javax.swing.JFrame {
         Object Name = nameRes.getText();
         Object BuildTime = buildTimeRes.getText();
         Object Hitpoint = hitpointRes.getText();
-//        Object TimeToFill = timeToFillRes.getText();
         Object CatchUpPoint = catchUpPointRes.getText();
         Object Description = descriptionRes.getText();
         Object Level = pLevelRes.getSelectedItem();
@@ -2681,7 +2680,6 @@ public class JSon extends javax.swing.JFrame {
         String sTownHallLevelReq = (String)TownHallLevelReq;
         String sName = (String)Name;
         String sBuildTime = (String)BuildTime;
-//        String sTimeToFill = (String)TimeToFill;
         String sCatchUpPoint = (String)CatchUpPoint;
         String sDescription = (String)Description;
         String sHitpoint =(String)Hitpoint;
@@ -2689,7 +2687,6 @@ public class JSon extends javax.swing.JFrame {
         int iLevel = Integer.parseInt(sLevel);
         int iTownHallLevelReq = Integer.parseInt(sTownHallLevelReq);
         float fBuildTime = Float.parseFloat(sBuildTime);
-//        float fTimeToFill = Float.parseFloat(sTimeToFill);
         float fCatchUpPoint = Float.parseFloat(sCatchUpPoint);
         float fHitpoint = Float.parseFloat(sHitpoint);
 
@@ -2737,14 +2734,9 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("capacity", capacity);
             jo.addProperty("productionRate", productionRate);
             jo.addProperty("maxHitpoint", fHitpoint);
-//            jo.addProperty("timeToFill", fTimeToFill);
             jo.addProperty("catchUpPoint", fCatchUpPoint);
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
-
-            //            currentPathString+s+
-//            Path currentRelativePath = Paths.get("");
-//            String currentPathString = currentRelativePath.toAbsolutePath().toString();
 
             try {
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
