@@ -1506,7 +1506,7 @@ public class JSon extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 255, Short.MAX_VALUE)
+                .addComponent(jTabbedPane4)
                 .addContainerGap())
         );
 
@@ -1913,28 +1913,21 @@ public class JSon extends javax.swing.JFrame {
         thLevel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
 
         maximumNumberOfBuildAvailable.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        maximumNumberOfBuildAvailable.setText("1");
 
         goldAvailable.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        goldAvailable.setText("1");
 
         elixirAvailable.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        elixirAvailable.setText("1");
 
         darkElixirAvailable.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        darkElixirAvailable.setText("1");
 
         jLabel104.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel104.setText("% Available to be Stolen");
 
         availableToBeStolen.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        availableToBeStolen.setText("1");
 
         capTH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        capTH.setText("1");
 
         storageAmountToReachCap.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        storageAmountToReachCap.setText("1");
 
         jLabel105.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel105.setText("Cap");
@@ -2338,33 +2331,30 @@ public class JSon extends javax.swing.JFrame {
         jLabel120.setText("Description");
 
         unitTypeRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        unitTypeRes1.setText("1");
 
         nameRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         hitpointRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        hitpointRes1.setText("1");
 
         buildTimeRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        buildTimeRes1.setText("1");
 
         buildCostRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        buildCostRes1.setText("1");
 
         experienceRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        experienceRes1.setText("1");
 
         descriptionRes1.setColumns(20);
         descriptionRes1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         descriptionRes1.setRows(5);
-        descriptionRes1.setText("Add a description.");
         jScrollPane3.setViewportView(descriptionRes1);
 
         capacity1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        capacity1.setText("1");
 
         capacity2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        capacity2.setText("1");
+        capacity2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                capacity2ActionPerformed(evt);
+            }
+        });
 
         jButton8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButton8.setText("Add");
@@ -2432,11 +2422,9 @@ public class JSon extends javax.swing.JFrame {
         jLabel72.setText("Capacity");
 
         maxLevel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        maxLevel1.setText("1");
         maxLevel1.setToolTipText("");
 
         maxLevel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        maxLevel2.setText("1");
 
         jLabel73.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel73.setText("MAX");
@@ -2448,10 +2436,13 @@ public class JSon extends javax.swing.JFrame {
         name3.setEnabled(false);
 
         maxLevel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        maxLevel3.setText("1");
 
         capacity3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        capacity3.setText("1");
+        capacity3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                capacity3ActionPerformed(evt);
+            }
+        });
 
         jButton13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButton13.setText("Add");
@@ -2658,7 +2649,7 @@ public class JSon extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2747,8 +2738,13 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
 
+            //            currentPathString+s+
+            Path currentRelativePath = Paths.get("");
+            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+
             try {
-                FileWriter file = new FileWriter(dir+"\\unit kategory\\buildings\\resource\\produsen\\"+unitType+"-"+sName+"-"+iLevel+".json");
+                String s = File.separator;
+                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
@@ -2819,8 +2815,13 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
 
+            //            currentPathString+s+
+            Path currentRelativePath = Paths.get("");
+            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+
             try {
-                FileWriter file = new FileWriter(dir+"\\unit kategory\\buildings\\resource\\storage\\"+unitType+"-"+sName+"-"+iLevel+".json");
+                String s = File.separator;
+                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"storage"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
@@ -2936,8 +2937,13 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
 
+            //            currentPathString+s+
+            Path currentRelativePath = Paths.get("");
+            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+
             try {
-                FileWriter file = new FileWriter(dir+"\\unit kategory\\buildings\\defenses\\buildings\\"+unitType+"-"+sName+"-"+iLevel+".json");
+                String s = File.separator;
+                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"defenses"+s+"buildings"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
@@ -3046,8 +3052,13 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
 
+            //            currentPathString+s+
+            Path currentRelativePath = Paths.get("");
+            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+
             try {
-                FileWriter file = new FileWriter(dir+"\\unit kategory\\buildings\\defenses\\traps\\"+unitType+"-"+sName+"-"+iLevel+".json");
+                String s = File.separator;
+                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"defenses"+s+"traps"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
@@ -3120,9 +3131,14 @@ public class JSon extends javax.swing.JFrame {
                 unitQueueArray.add(new JsonPrimitive(armyList.getModel().getElementAt(a).toString()));
             }
             jo.add("maximumUnitQueueItems", unitQueueArray);
-                            
+                 
+//            currentPathString+s+
+            Path currentRelativePath = Paths.get("");
+            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+
             try {
-                FileWriter file = new FileWriter(dir+"\\unit kategory\\buildings\\army buildings\\produsen\\"+unitType+"-"+sName+"-"+iLevel+".json");
+                String s = File.separator;
+                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
@@ -3186,8 +3202,13 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("description", sDescription);
             jo.addProperty("troopsCapacity", troopsCapacity);
 
+//            currentPathString+s+
+            Path currentRelativePath = Paths.get("");
+            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+
             try {
-                FileWriter file = new FileWriter(dir+"\\unit kategory\\buildings\\army buildings\\produsen\\"+unitType+"-"+sName+"-"+iLevel+".json");
+                String s = File.separator;
+                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
@@ -3279,8 +3300,12 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("attackType", iAttackType);
             jo.addProperty("description", sDescription);
 
+            Path currentRelativePath = Paths.get("");
+            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+
             try {
-                FileWriter file = new FileWriter(dir+"\\unit kategory\\army\\"+unitType+"-"+sName+"-"+iLevel+".json");
+                String s = File.separator;
+                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"army"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
@@ -3424,6 +3449,7 @@ public class JSon extends javax.swing.JFrame {
         String dir = System.getProperty("user.dir");
         File fa = new File(dir+"\\unit kategory\\buildings\\resource\\pusat\\"+unitType+"-"+sName+"-"+iLevel+".json");
 
+        
             if(fa.exists()){
                 int Ex = JOptionPane.showConfirmDialog(this, "Timpa file?");
                 if (Ex == JOptionPane.OK_OPTION) {
@@ -3530,7 +3556,6 @@ public class JSon extends javax.swing.JFrame {
                 } catch (IOException e) {
 
                     JOptionPane.showMessageDialog(this, "Gagal membuat file!");
-
 
                     e.printStackTrace();
                 }
@@ -3699,6 +3724,14 @@ public class JSon extends javax.swing.JFrame {
     private void name1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_name1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_name1ActionPerformed
+
+    private void capacity2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capacity2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_capacity2ActionPerformed
+
+    private void capacity3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capacity3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_capacity3ActionPerformed
 
     /**
      * @param args the command line arguments
