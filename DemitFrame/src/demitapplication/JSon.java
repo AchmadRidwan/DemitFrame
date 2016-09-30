@@ -2710,8 +2710,12 @@ public class JSon extends javax.swing.JFrame {
             return;
         }
 
-        String dir = System.getProperty("user.dir");
-        File fa = new File(dir+"\\unit kategory\\buildings\\resource\\produsen\\"+unitType+"-"+sName+"-"+iLevel+".json");
+        Path currentRelativePath = Paths.get("");
+        String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        
+//        String dir = System.getProperty("user.dir");
+        String s = File.separator;
+        File fa = new File(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
                 int Ex = JOptionPane.showConfirmDialog(this, "Timpa file?");
@@ -2739,11 +2743,10 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("description", sDescription);
 
             //            currentPathString+s+
-            Path currentRelativePath = Paths.get("");
-            String currentPathString = currentRelativePath.toAbsolutePath().toString();
+//            Path currentRelativePath = Paths.get("");
+//            String currentPathString = currentRelativePath.toAbsolutePath().toString();
 
             try {
-                String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
@@ -2791,8 +2794,11 @@ public class JSon extends javax.swing.JFrame {
             return;
         }
 
-        String dir = System.getProperty("user.dir");
-        File fa = new File(dir+"\\unit kategory\\buildings\\resource\\storage\\"+unitType+"-"+sName+"-"+iLevel+".json");
+        Path currentRelativePath = Paths.get("");
+        String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        
+        String s = File.separator;
+        File fa = new File(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"storage"+s+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
                 int Ex = JOptionPane.showConfirmDialog(this, "Timpa file?");
@@ -2815,12 +2821,7 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
 
-            //            currentPathString+s+
-            Path currentRelativePath = Paths.get("");
-            String currentPathString = currentRelativePath.toAbsolutePath().toString();
-
             try {
-                String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"storage"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
@@ -2909,8 +2910,11 @@ public class JSon extends javax.swing.JFrame {
             return;
         }
 
-        String dir = System.getProperty("user.dir");
-        File fa = new File(dir+"\\unit kategory\\buildings\\defenses\\buildings\\"+unitType+"-"+sName+"-"+iLevel+".json");
+        Path currentRelativePath = Paths.get("");
+        String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        
+        String s = File.separator;
+        File fa = new File(currentPathString+s+"unit kategory"+s+"buildings"+s+"defenses"+s+"buildings"+s+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
                 int Ex = JOptionPane.showConfirmDialog(this, "Timpa file?");
@@ -2937,12 +2941,7 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
 
-            //            currentPathString+s+
-            Path currentRelativePath = Paths.get("");
-            String currentPathString = currentRelativePath.toAbsolutePath().toString();
-
             try {
-                String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"defenses"+s+"buildings"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
@@ -3023,8 +3022,11 @@ public class JSon extends javax.swing.JFrame {
             return;
         }
 
-        String dir = System.getProperty("user.dir");
-        File fa = new File(dir+"\\unit kategory\\buildings\\defenses\\traps\\"+unitType+"-"+sName+"-"+iLevel+".json");
+        Path currentRelativePath = Paths.get("");
+        String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        
+        String s = File.separator;
+        File fa = new File(currentPathString+s+"unit kategory"+s+"buildings"+s+"defenses"+s+"traps"+s+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
                 int Ex = JOptionPane.showConfirmDialog(this, "Timpa file?");
@@ -3052,12 +3054,7 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
 
-            //            currentPathString+s+
-            Path currentRelativePath = Paths.get("");
-            String currentPathString = currentRelativePath.toAbsolutePath().toString();
-
             try {
-                String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"defenses"+s+"traps"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
@@ -3096,8 +3093,11 @@ public class JSon extends javax.swing.JFrame {
         int boostCost = getInt(boostCostAr);
         int maximumUnit = getInt(maximumUnitAr);
 
-        String dir = System.getProperty("user.dir");
-        File fa = new File(dir+"\\unit kategory\\buildings\\army buildings\\produsen\\"+unitType+"-"+sName+"-"+iLevel+".json");
+        Path currentRelativePath = Paths.get("");
+        String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        
+        String s = File.separator;
+        File fa = new File(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
                 int Ex = JOptionPane.showConfirmDialog(this, "Timpa file?");
@@ -3132,12 +3132,7 @@ public class JSon extends javax.swing.JFrame {
             }
             jo.add("maximumUnitQueueItems", unitQueueArray);
                  
-//            currentPathString+s+
-            Path currentRelativePath = Paths.get("");
-            String currentPathString = currentRelativePath.toAbsolutePath().toString();
-
             try {
-                String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
@@ -3178,8 +3173,11 @@ public class JSon extends javax.swing.JFrame {
         int experience = getInt(experienceAr);
         int troopsCapacity = getInt(troopCapacityAr);
 
-        String dir = System.getProperty("user.dir");
-        File fa = new File(dir+"\\unit kategory\\buildings\\army buildings\\produsen\\"+unitType+"-"+sName+"-"+iLevel+".json");
+        Path currentRelativePath = Paths.get("");
+        String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        
+        String s = File.separator;
+        File fa = new File(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
                 int Ex = JOptionPane.showConfirmDialog(this, "Timpa file?");
@@ -3202,12 +3200,7 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("description", sDescription);
             jo.addProperty("troopsCapacity", troopsCapacity);
 
-//            currentPathString+s+
-            Path currentRelativePath = Paths.get("");
-            String currentPathString = currentRelativePath.toAbsolutePath().toString();
-
             try {
-                String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
@@ -3267,8 +3260,11 @@ public class JSon extends javax.swing.JFrame {
         int hausingSpace = getInt(housingSpaceArmy);
         int unitType = getInt(unitTypeArmy);
 
-        String dir = System.getProperty("user.dir");
-        File fa = new File(dir+"\\unit kategory\\army\\"+unitType+"-"+sName+"-"+iLevel+".json");
+        Path currentRelativePath = Paths.get("");
+        String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        
+        String s = File.separator;
+        File fa = new File(currentPathString+s+"unit kategory"+s+"army"+s+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
                 int Ex = JOptionPane.showConfirmDialog(this, "Timpa file?");
@@ -3300,11 +3296,7 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("attackType", iAttackType);
             jo.addProperty("description", sDescription);
 
-            Path currentRelativePath = Paths.get("");
-            String currentPathString = currentRelativePath.toAbsolutePath().toString();
-
             try {
-                String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"army"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
@@ -3446,8 +3438,11 @@ public class JSon extends javax.swing.JFrame {
             return;
         }
 
-        String dir = System.getProperty("user.dir");
-        File fa = new File(dir+"\\unit kategory\\buildings\\resource\\pusat\\"+unitType+"-"+sName+"-"+iLevel+".json");
+        Path currentRelativePath = Paths.get("");
+        String currentPathString = currentRelativePath.toAbsolutePath().toString();
+        
+        String s = File.separator;
+        File fa = new File(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"pusat"+s+unitType+"-"+sName+"-"+iLevel+".json");
 
         
             if(fa.exists()){
@@ -3541,12 +3536,7 @@ public class JSon extends javax.swing.JFrame {
             
             jo.addProperty("description", sDescription);
         
-
-            Path currentRelativePath = Paths.get("");
-            String currentPathString = currentRelativePath.toAbsolutePath().toString();
-
             try {
-                String s = File.separator;
                 FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"pusat"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
