@@ -118,11 +118,11 @@ public class JSon extends javax.swing.JFrame {
             
         }
         if(!armyStorageExist) {
-            success = (new File(currentPathString  + s +  "unit kategory" + s + "army" + s + "storage")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "buildings" + s + "army buildings" + s + "storage")).mkdirs();
             
         }
         if(!armyProdusenExist) {
-            success = (new File(currentPathString  + s +  "unit kategory" + s + "army" + s + "produsen")).mkdirs();
+            success = (new File(currentPathString  + s +  "unit kategory" + s + "buildings" + s + "army buildings" + s + "produsen")).mkdirs();
             
         }
         if(!buildingsDefExist) {
@@ -615,6 +615,7 @@ public class JSon extends javax.swing.JFrame {
         timeToFillRes.setEnabled(false);
 
         catchUpPointRes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        catchUpPointRes.setEnabled(false);
 
         pLevelRes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pLevelRes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -1943,6 +1944,12 @@ public class JSon extends javax.swing.JFrame {
         capTH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         storageAmountToReachCap.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        storageAmountToReachCap.setEnabled(false);
+        storageAmountToReachCap.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                storageAmountToReachCapActionPerformed(evt);
+            }
+        });
 
         jLabel105.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel105.setText("Cap");
@@ -2031,51 +2038,21 @@ public class JSon extends javax.swing.JFrame {
         jTabbedPane3.addTab("Town Hall", jPanel23);
 
         nameList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        nameList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "zz" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane21.setViewportView(nameList1);
 
         capacityList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        capacityList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane22.setViewportView(capacityList1);
 
         nameList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        nameList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "zz" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane23.setViewportView(nameList2);
 
         capacityList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        capacityList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane6.setViewportView(capacityList2);
 
         maxLevelList2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        maxLevelList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane7.setViewportView(maxLevelList2);
 
         maxLevelList1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        maxLevelList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane8.setViewportView(maxLevelList1);
 
         jLabel75.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2097,27 +2074,12 @@ public class JSon extends javax.swing.JFrame {
         jLabel80.setText("Name File");
 
         nameList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        nameList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "zz" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane24.setViewportView(nameList3);
 
         maxLevelList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        maxLevelList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane9.setViewportView(maxLevelList3);
 
         capacityList3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        capacityList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane10.setViewportView(capacityList3);
 
         jLabel81.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2598,7 +2560,7 @@ public class JSon extends javax.swing.JFrame {
                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel119)
                             .addComponent(nameRes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel73)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2661,7 +2623,7 @@ public class JSon extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2699,7 +2661,7 @@ public class JSon extends javax.swing.JFrame {
         int iLevel = Integer.parseInt(sLevel);
         int iTownHallLevelReq = Integer.parseInt(sTownHallLevelReq);
         float fBuildTime = Float.parseFloat(sBuildTime);
-        float fCatchUpPoint = Float.parseFloat(sCatchUpPoint);
+        //float fCatchUpPoint = Float.parseFloat(sCatchUpPoint);
         float fHitpoint = Float.parseFloat(sHitpoint);
 
         int unitType = getInt(unitTypeRes);
@@ -2713,6 +2675,7 @@ public class JSon extends javax.swing.JFrame {
         int boostCost = getInt(boostCostRes);
         int capacity = getInt(pCapacityRes);
         int productionRate = getInt(productionRateRes);
+<<<<<<< HEAD
 //        if(descriptionRes.getText().equals("")) {
 //            descriptionRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
@@ -2723,16 +2686,36 @@ public class JSon extends javax.swing.JFrame {
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
 //        }
+=======
+        if(descriptionRes.getText().equals("")) {
+            descriptionRes.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
+            return;
+        }
+        if(buildTimeRes.getText().equals("")) {
+            buildTimeRes.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
+            return;
+        }
+>>>>>>> refs/remotes/origin/mbalDemit
 //        if(catchUpPointRes.getText().equals("")) {
 //            catchUpPointRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
 //        }
+<<<<<<< HEAD
 //        if(hitpointRes.getText().equals("")) {
 //            hitpointRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
 //        }
+=======
+        if(hitpointRes.getText().equals("")) {
+            hitpointRes.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
+            return;
+        }
+>>>>>>> refs/remotes/origin/mbalDemit
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -2761,7 +2744,7 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("capacity", capacity);
             jo.addProperty("productionRate", productionRate);
             jo.addProperty("maxHitpoint", fHitpoint);
-            jo.addProperty("catchUpPoint", fCatchUpPoint);
+            //jo.addProperty("catchUpPoint", fCatchUpPoint);
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
 
@@ -2859,12 +2842,59 @@ public class JSon extends javax.swing.JFrame {
                     file.close();
                     System.out.println(json);
                 } catch (IOException e) {
+                    JOptionPane.showMessageDialog(this, "Gagal membuat file");
                     e.printStackTrace();
                 }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+
+        if(damageShotDef.getText().equals("")) {
+            //damageShotDef.setBackground(Color.red);
+            //JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
+            //return;
+            damageShotDef.setText("0");
+        }
+        if(rangeDef.getText().equals("")) {
+            //rangeDef.setBackground(Color.red);
+            //JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
+            //return;
+            rangeDef.setText("0");
+        }
+        if(hitpointDef.getText().equals("")) {
+            //hitpointDef.setBackground(Color.red);
+            //JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
+            //return;
+            hitpointDef.setText("0");
+        }
+        if(buildTimeDef.getText().equals("")) {
+            //buildTimeDef.setBackground(Color.red);
+            //JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
+            //return;
+            buildTimeDef.setText("0");
+        }
+        if(attackSpeedDef.getText().equals("")) {
+            //attackSpeedDef.setBackground(Color.red);
+            //JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
+            //return;
+            attackSpeedDef.setText("0");
+        }
+
+        int unitType = getInt(unitTypeDef);
+        if(nameDef.getText().equals("")) {
+            nameDef.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Isikan unit type");
+            return;
+        }
+        int buildCost = getInt (buildCostDef);
+        int experience = getInt(experienceDef);
+        if(descriptionDef.getText().equals("")) {
+            descriptionDef.setBackground(Color.red);
+            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
+            return;
+        }
+        
         Object Damage = damageShotDef.getText();
         Object Range = rangeDef.getText();
         Object Name = nameDef.getText();
@@ -2898,6 +2928,7 @@ public class JSon extends javax.swing.JFrame {
         float fHitpoint = Float.parseFloat(sHitpoint);
         float fBuildTime = Float.parseFloat(sBuildTime);
         float fAttackSpeed = Float.parseFloat(sAttackSpeed);
+<<<<<<< HEAD
         float fDamagePerSeond = Float.parseFloat(sDamagePerSecond);
 
 //        if(damageShotDef.getText().equals("")) {
@@ -2939,6 +2970,9 @@ public class JSon extends javax.swing.JFrame {
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
 //        }
+=======
+        //float fDamagePerSecond = Float.parseFloat(sDamagePerSecond);
+>>>>>>> refs/remotes/origin/mbalDemit
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -2979,6 +3013,7 @@ public class JSon extends javax.swing.JFrame {
                     file.close();
                     System.out.println(json);
                 } catch (IOException e) {
+                    JOptionPane.showMessageDialog(this, "Gagal membuat file");
                     e.printStackTrace();
                 }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -3250,7 +3285,7 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("troopsCapacity", troopsCapacity);
 
             try {
-                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
+                FileWriter file = new FileWriter(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings"+s+"storage"+s+unitType+"-"+sName+"-"+iLevel+".json");
                     String json = gson.toJson(jo);
                     file.write(json);
                     file.flush();
@@ -3308,6 +3343,7 @@ public class JSon extends javax.swing.JFrame {
         int researchCost = getInt(researchCostArmy);
         int hausingSpace = getInt(housingSpaceArmy);
         int unitType = getInt(unitTypeArmy);
+<<<<<<< HEAD
 //        if(descriptionRes.getText().equals("")) {
 //            descriptionRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
@@ -3339,6 +3375,10 @@ public class JSon extends javax.swing.JFrame {
 //            return;
 //        }
 //        if(descriptionRes.getText().equals("")) {
+=======
+        
+//        if(descriptionArmy.getText().equals("")) {
+>>>>>>> refs/remotes/origin/mbalDemit
 //            descriptionRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
@@ -3608,7 +3648,7 @@ public class JSon extends javax.swing.JFrame {
             
             JsonArray namefile3 = new JsonArray();
             for ( int b = 0; b < nameCp3; b++ ){
-                namefile3.add(new JsonPrimitive(nameList2.getModel().getElementAt(b)));
+                namefile3.add(new JsonPrimitive(nameList3.getModel().getElementAt(b)));
             }
             jo.add("nameFile3", namefile3);
             
@@ -3852,6 +3892,10 @@ public class JSon extends javax.swing.JFrame {
        timeToFillRes.setText(Integer.toString(hasilR));
        }
     }//GEN-LAST:event_productionRateResFocusLost
+
+    private void storageAmountToReachCapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_storageAmountToReachCapActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_storageAmountToReachCapActionPerformed
 
     /**
      * @param args the command line arguments
