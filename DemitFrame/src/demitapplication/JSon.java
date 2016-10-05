@@ -511,13 +511,7 @@ public class JSon extends javax.swing.JFrame {
         jLabel83 = new javax.swing.JLabel();
         jLabel84 = new javax.swing.JLabel();
         jLabel107 = new javax.swing.JLabel();
-        jLabel108 = new javax.swing.JLabel();
         jLabel109 = new javax.swing.JLabel();
-        jLabel110 = new javax.swing.JLabel();
-        jLabel111 = new javax.swing.JLabel();
-        jLabel112 = new javax.swing.JLabel();
-        jLabel113 = new javax.swing.JLabel();
-        jLabel121 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
         jLabel86 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
@@ -2125,7 +2119,7 @@ public class JSon extends javax.swing.JFrame {
                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel84))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
                         .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2182,89 +2176,52 @@ public class JSon extends javax.swing.JFrame {
                         .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
-        jLabel107.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel107.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel107.setText("Resource Buildings");
 
-        jLabel108.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel108.setText("Available");
-
-        jLabel109.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel109.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel109.setText("Defensive Buildings");
 
-        jLabel110.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel110.setText("Resource Buildings");
+        jLabel85.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel85.setText("Offensive Buildings");
 
-        jLabel111.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel111.setText("Defensive Buildings Max");
-
-        jLabel112.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel112.setText("Max Level By TH");
-
-        jLabel113.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel113.setText("Available Level");
-
-        jLabel121.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel121.setText("Available");
-
-        jLabel85.setText("Offensive Buildings Available");
-
-        jLabel86.setText("Army and Other Buildings Max Level By Town Hall");
+        jLabel86.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel86.setText("Army and Other");
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel24Layout.createSequentialGroup()
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel107)
-                            .addComponent(jLabel108))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel110, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel112, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(77, 77, 77)
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel85)
-                            .addComponent(jLabel86))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel121)
-                            .addComponent(jLabel109))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel24Layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jLabel107)
+                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel24Layout.createSequentialGroup()
+                        .addGap(193, 193, 193)
+                        .addComponent(jLabel86)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel24Layout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addComponent(jLabel85)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel109)
+                        .addGap(55, 55, 55))))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel24Layout.createSequentialGroup()
                 .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel111)
-                            .addComponent(jLabel109))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel113)
-                            .addComponent(jLabel121)))
-                    .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel107)
-                            .addComponent(jLabel110)
-                            .addComponent(jLabel85))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel108)
-                            .addComponent(jLabel112)
-                            .addComponent(jLabel86))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel107)
+                    .addComponent(jLabel85)
+                    .addComponent(jLabel109))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel86)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Town Hall Available", jPanel24);
@@ -2623,7 +2580,7 @@ public class JSon extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2675,7 +2632,10 @@ public class JSon extends javax.swing.JFrame {
         int boostCost = getInt(boostCostRes);
         int capacity = getInt(pCapacityRes);
         int productionRate = getInt(productionRateRes);
+<<<<<<< HEAD
         
+=======
+>>>>>>> master
 //        if(descriptionRes.getText().equals("")) {
 //            descriptionRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
@@ -2923,7 +2883,11 @@ public class JSon extends javax.swing.JFrame {
         float fHitpoint = Float.parseFloat(sHitpoint);
         float fBuildTime = Float.parseFloat(sBuildTime);
         float fAttackSpeed = Float.parseFloat(sAttackSpeed);
+<<<<<<< HEAD
         //float fDamagePerSeond = Float.parseFloat(sDamagePerSecond);
+=======
+        float fDamagePerSeond = Float.parseFloat(sDamagePerSecond);
+>>>>>>> master
 
 //        if(damageShotDef.getText().equals("")) {
 //            damageShotDef.setBackground(Color.red);
@@ -2961,7 +2925,10 @@ public class JSon extends javax.swing.JFrame {
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
 //        }
+<<<<<<< HEAD
         //float fDamagePerSecond = Float.parseFloat(sDamagePerSecond);
+=======
+>>>>>>> master
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -3250,7 +3217,7 @@ public class JSon extends javax.swing.JFrame {
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
         
         String s = File.separator;
-        File fa = new File(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
+        File fa = new File(currentPathString+s+"unit kategory"+s+"buildings"+s+"army buildings"+s+"storage"+s+unitType+"-"+sName+"-"+iLevel+".json");
 
             if(fa.exists()){
                 int Ex = JOptionPane.showConfirmDialog(this, "Timpa file?");
@@ -3363,8 +3330,11 @@ public class JSon extends javax.swing.JFrame {
 //            return;
 //        }
 //        if(descriptionRes.getText().equals("")) {
+<<<<<<< HEAD
         
 //        if(descriptionArmy.getText().equals("")) {
+=======
+>>>>>>> master
 //            descriptionRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
@@ -4003,13 +3973,8 @@ public class JSon extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
-    private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel110;
-    private javax.swing.JLabel jLabel111;
-    private javax.swing.JLabel jLabel112;
-    private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel114;
     private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel116;
@@ -4018,7 +3983,6 @@ public class JSon extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel120;
-    private javax.swing.JLabel jLabel121;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
