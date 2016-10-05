@@ -2675,7 +2675,7 @@ public class JSon extends javax.swing.JFrame {
         int boostCost = getInt(boostCostRes);
         int capacity = getInt(pCapacityRes);
         int productionRate = getInt(productionRateRes);
-<<<<<<< HEAD
+        
 //        if(descriptionRes.getText().equals("")) {
 //            descriptionRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
@@ -2686,7 +2686,6 @@ public class JSon extends javax.swing.JFrame {
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
 //        }
-=======
         if(descriptionRes.getText().equals("")) {
             descriptionRes.setBackground(Color.red);
             JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
@@ -2697,25 +2696,21 @@ public class JSon extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
             return;
         }
->>>>>>> refs/remotes/origin/mbalDemit
 //        if(catchUpPointRes.getText().equals("")) {
 //            catchUpPointRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
 //        }
-<<<<<<< HEAD
 //        if(hitpointRes.getText().equals("")) {
 //            hitpointRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
 //        }
-=======
         if(hitpointRes.getText().equals("")) {
             hitpointRes.setBackground(Color.red);
             JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
             return;
         }
->>>>>>> refs/remotes/origin/mbalDemit
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -2928,8 +2923,7 @@ public class JSon extends javax.swing.JFrame {
         float fHitpoint = Float.parseFloat(sHitpoint);
         float fBuildTime = Float.parseFloat(sBuildTime);
         float fAttackSpeed = Float.parseFloat(sAttackSpeed);
-<<<<<<< HEAD
-        float fDamagePerSeond = Float.parseFloat(sDamagePerSecond);
+        //float fDamagePerSeond = Float.parseFloat(sDamagePerSecond);
 
 //        if(damageShotDef.getText().equals("")) {
 //            damageShotDef.setBackground(Color.red);
@@ -2957,22 +2951,17 @@ public class JSon extends javax.swing.JFrame {
 //            return;
 //        }
 
-        int unitType = getInt(unitTypeDef);
 //        if(nameDef.getText().equals("")) {
 //            nameDef.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan nama dengan lengkap");
 //            return;
 //        }
-        int buildCost = getInt (buildCostDef);
-        int experience = getInt(experienceDef);
 //        if(descriptionDef.getText().equals("")) {
 //            descriptionDef.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
 //        }
-=======
         //float fDamagePerSecond = Float.parseFloat(sDamagePerSecond);
->>>>>>> refs/remotes/origin/mbalDemit
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -3343,7 +3332,6 @@ public class JSon extends javax.swing.JFrame {
         int researchCost = getInt(researchCostArmy);
         int hausingSpace = getInt(housingSpaceArmy);
         int unitType = getInt(unitTypeArmy);
-<<<<<<< HEAD
 //        if(descriptionRes.getText().equals("")) {
 //            descriptionRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
@@ -3375,10 +3363,8 @@ public class JSon extends javax.swing.JFrame {
 //            return;
 //        }
 //        if(descriptionRes.getText().equals("")) {
-=======
         
 //        if(descriptionArmy.getText().equals("")) {
->>>>>>> refs/remotes/origin/mbalDemit
 //            descriptionRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
