@@ -1308,11 +1308,6 @@ public class JSon extends javax.swing.JFrame {
         });
 
         armyList.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        armyList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "GEGEH" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane20.setViewportView(armyList);
 
         jButton23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2221,7 +2216,7 @@ public class JSon extends javax.swing.JFrame {
                     .addComponent(jLabel109))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel86)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Town Hall Available", jPanel24);
@@ -2580,7 +2575,7 @@ public class JSon extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2632,10 +2627,6 @@ public class JSon extends javax.swing.JFrame {
         int boostCost = getInt(boostCostRes);
         int capacity = getInt(pCapacityRes);
         int productionRate = getInt(productionRateRes);
-<<<<<<< HEAD
-        
-=======
->>>>>>> master
 //        if(descriptionRes.getText().equals("")) {
 //            descriptionRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
@@ -2883,11 +2874,6 @@ public class JSon extends javax.swing.JFrame {
         float fHitpoint = Float.parseFloat(sHitpoint);
         float fBuildTime = Float.parseFloat(sBuildTime);
         float fAttackSpeed = Float.parseFloat(sAttackSpeed);
-<<<<<<< HEAD
-        //float fDamagePerSeond = Float.parseFloat(sDamagePerSecond);
-=======
-        float fDamagePerSeond = Float.parseFloat(sDamagePerSecond);
->>>>>>> master
 
 //        if(damageShotDef.getText().equals("")) {
 //            damageShotDef.setBackground(Color.red);
@@ -2925,10 +2911,7 @@ public class JSon extends javax.swing.JFrame {
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
 //        }
-<<<<<<< HEAD
         //float fDamagePerSecond = Float.parseFloat(sDamagePerSecond);
-=======
->>>>>>> master
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -3159,7 +3142,7 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("maximumUnitQueueLength", maximumUnit);
             JsonArray unitQueueArray = new JsonArray();
             for ( int a = 0; a < army; a++ ){
-                unitQueueArray.add(new JsonPrimitive(armyList.getModel().getElementAt(a).toString()));
+                unitQueueArray.add(new JsonPrimitive(Integer.parseInt(armyList.getModel().getElementAt(a).split("-")[0])));
             }
             jo.add("maximumUnitQueueItems", unitQueueArray);
                  
@@ -3330,11 +3313,7 @@ public class JSon extends javax.swing.JFrame {
 //            return;
 //        }
 //        if(descriptionRes.getText().equals("")) {
-<<<<<<< HEAD
-        
 //        if(descriptionArmy.getText().equals("")) {
-=======
->>>>>>> master
 //            descriptionRes.setBackground(Color.red);
 //            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
 //            return;
@@ -3365,12 +3344,12 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("damagePerAttack", fDamagePerAttack);
             jo.addProperty("researchTime", fResearchTime);
             jo.addProperty("trainingTime", fTrainingTime);
-            jo.addProperty("movemendSpeed", fMovemendSpeed);
+            jo.addProperty("movementSpeed", fMovemendSpeed);
             jo.addProperty("attackSpeed", fAttackSeed);
             jo.addProperty("range", fRange);
             jo.addProperty("trainingCost", trainingCost);
             jo.addProperty("researchCost", researchCost);
-            jo.addProperty("hausingSpace", hausingSpace);
+            jo.addProperty("housingSpace", hausingSpace);
             jo.addProperty("unitType", unitType);
             jo.addProperty("preferredTarget", iPreferredTarget);
             jo.addProperty("attackType", iAttackType);
@@ -3457,8 +3436,9 @@ public class JSon extends javax.swing.JFrame {
         String name = new String();
         name = armyName.getText();
         String [] arrayName = name.split("-");
+        String data1 = arrayName[0];
         String data2 = arrayName[1];
-        modelArmy.addElement(data2);
+        modelArmy.addElement(data1 + "-" + data2);
         armyList.setModel(modelArmy);
         armyName.setText("");
         //System.out.println(data2);

@@ -1,0 +1,16 @@
+{
+  "unitType": 1234,
+  "name": "derp",
+  "level": 1,
+  "maxHitpoint": 1234.0,
+  "buildCost": 1234,
+  "buildTime": 1234.0,
+  "experienceGained": 1234,
+  "townHallLevelRequired": 1,
+  "description": "",
+  "boostCost": 1,
+  "maximumUnitQueueLength": 10,
+  "maximumUnitQueueItems": [
+    1
+  ]
+}

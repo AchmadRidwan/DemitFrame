@@ -55,7 +55,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jTabbedPane1" min="-2" pref="580" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="14" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1918,9 +1918,7 @@
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                                      <StringArray count="1">
-                                        <StringItem index="0" value="GEGEH"/>
-                                      </StringArray>
+                                      <StringArray count="0"/>
                                     </Property>
                                   </Properties>
                                   <AuxValues>
@@ -3389,7 +3387,7 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel86" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="14" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
