@@ -135,115 +135,7 @@ public class JSon extends javax.swing.JFrame {
         }
     }
     
-//        private void checkFile(boolean fileExists)
-//        {
-//            Path currentRelativePath = Paths.get("");
-//            String currentPathString = currentRelativePath.toAbsolutePath().toString();
-//            String s = File.separator;
-//            boolean success;
-//            String fileDir = "";
-//            if (fileExists)
-//            {
-//                fileDir = "";
-//                success = (new File(currentPathString + fileDir)).mkdirs();
-//                if (!success)
-//                {
-//                    JOptionPane.showMessageDialog(this, "Failed to make directory");
-//                }
-//            }
-//        }
-        
-//        File dataFile = new File(kategoryPath);
-//        boolean dataexist = dataFile.exists();
-//        if(dataexist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder kategory dan isi folder kategory terlebih dahulu");
-//            System.exit(0);
-//        }            
-//        File buildingsFile = new File(buildingsPath);
-//        boolean buildingsExist = buildingsFile.exists();
-//        if(buildingsExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (buildings) di dalam folder kategory");
-//            System.exit(0);
-//        }
-//        File armyFile = new File(armyPath);
-//        boolean armyExist = armyFile.exists();
-//        if(armyExist){
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (army) di dalam folder kategory");
-//            System.exit(0);
-//        }
-//        File resourceFile = new File(resourcePath);
-//        boolean resourceExist = resourceFile.exists();
-//        if(resourceExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (resource) di dalam folder (buildings)");
-//            System.exit(0);
-//        }        
-//        File defensesFile = new File(defensesPath);
-//        boolean defensesExist = defensesFile.exists();
-//        if(defensesExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (defenses) di dalam folder (buildings)");
-//            System.exit(0);
-//        } 
-//        File armybuildFile = new File(armybuildPath);
-//        boolean armybuildExist = armybuildFile.exists();
-//        if(armybuildExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (army) di dalam folder (buildings)");
-//            System.exit(0);
-//        } 
-//        File reStorageFile = new File(reStoragePath);
-//        boolean reStorageExist = reStorageFile.exists();
-//        if(reStorageExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (storage) di dalam folder (resource)");
-//            System.exit(0);
-//        } 
-//        File reProdusenFile = new File(reProdusenPath);
-//        boolean reProdusenExist = reProdusenFile.exists();
-//        if(reProdusenExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (produsen) di dalam folder (resource)");
-//            System.exit(0);
-//        }
-//        File rePusatFile = new File(rePusatPath);
-//        boolean rePusatExist = rePusatFile.exists();
-//        if(rePusatExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (pusat) di dalam folder (resource)");
-//            System.exit(0);
-//        }
-//        File armyStorageFile = new File(armyStoragePath);
-//        boolean armyStorageExist = armyStorageFile.exists();
-//        if(armyStorageExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (storage) di dalam folder (army buildings)");
-//            System.exit(0);
-//        }
-//        File armyProdusenFile = new File(armyProdusenPath);
-//        boolean armyProdusenExist = armyProdusenFile.exists();
-//        if(armyProdusenExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (produsen) di dalam folder (army buildings)");
-//            System.exit(0);
-//        }
-//        File buildingsDefFile = new File(buildingsDefPath);
-//        boolean buildingsDefExist = buildingsDefFile.exists();
-//        if(buildingsDefExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (buildings) di dalam folder (defenses)");
-//            System.exit(0);
-//        }
-//        File trapsDefFile = new File(trapsDefPath);
-//        boolean trapsDefExist = trapsDefFile.exists();
-//        if(trapsDefExist) {
-//        }else {
-//            JOptionPane.showMessageDialog(this, "buatlah folder (traps) di dalam folder (defenses)");
-//            System.exit(0);
-//        }
+
     
     public int getInt(JTextField f){
         String s = f.getText();
@@ -2594,10 +2486,35 @@ public class JSon extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        if(unitTypeRes.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan unit type dengan lengkap");
+            return;
+        }
+        if(nameRes.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan name dengan lengkap");
+            return;
+        }
+        if(descriptionRes.getText().equals("")) {
+            descriptionRes.setText("-");
+        }
+        
+        if(buildTimeRes.getText().equals("")) {
+            buildTimeRes.setText("0");
+        }
+        if(hitpointRes.getText().equals("")) {
+            hitpointRes.setText("0");
+        }
+        
+        int unitType = getInt(unitTypeRes);
+        int buildCost = getInt(buildCostRes);
+        int experience = getInt(experienceRes);
+        int boostCost = getInt(boostCostRes);
+        int capacity = getInt(pCapacityRes);
+        int productionRate = getInt(productionRateRes);
+        
         Object Name = nameRes.getText();
         Object BuildTime = buildTimeRes.getText();
         Object Hitpoint = hitpointRes.getText();
-        Object CatchUpPoint = catchUpPointRes.getText();
         Object Description = descriptionRes.getText();
         Object Level = pLevelRes.getSelectedItem();
         Object TownHallLevelReq = pTownHallLevelReqRes.getSelectedItem();
@@ -2606,67 +2523,17 @@ public class JSon extends javax.swing.JFrame {
         String sTownHallLevelReq = (String)TownHallLevelReq;
         String sName = (String)Name;
         String sBuildTime = (String)BuildTime;
-        String sCatchUpPoint = (String)CatchUpPoint;
         String sDescription = (String)Description;
         String sHitpoint =(String)Hitpoint;
 
         int iLevel = Integer.parseInt(sLevel);
         int iTownHallLevelReq = Integer.parseInt(sTownHallLevelReq);
         float fBuildTime = Float.parseFloat(sBuildTime);
-        //float fCatchUpPoint = Float.parseFloat(sCatchUpPoint);
         float fHitpoint = Float.parseFloat(sHitpoint);
-
-        int unitType = getInt(unitTypeRes);
-//        if(nameRes.getText().equals("")) {
-//            nameRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan nama dengan lengkap");
-//            return;
-//        }
-        int buildCost = getInt(buildCostRes);
-        int experience = getInt(experienceRes);
-        int boostCost = getInt(boostCostRes);
-        int capacity = getInt(pCapacityRes);
-        int productionRate = getInt(productionRateRes);
-//        if(descriptionRes.getText().equals("")) {
-//            descriptionRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(buildTimeRes.getText().equals("")) {
-//            buildTimeRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-        if(descriptionRes.getText().equals("")) {
-            descriptionRes.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-            return;
-        }
-        if(buildTimeRes.getText().equals("")) {
-            buildTimeRes.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-            return;
-        }
-//        if(catchUpPointRes.getText().equals("")) {
-//            catchUpPointRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(hitpointRes.getText().equals("")) {
-//            hitpointRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-        if(hitpointRes.getText().equals("")) {
-            hitpointRes.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-            return;
-        }
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
         
-//        String dir = System.getProperty("user.dir");
         String s = File.separator;
         File fa = new File(currentPathString+s+"unit kategory"+s+"buildings"+s+"resource"+s+"produsen"+s+unitType+"-"+sName+"-"+iLevel+".json");
 
@@ -2690,7 +2557,6 @@ public class JSon extends javax.swing.JFrame {
             jo.addProperty("capacity", capacity);
             jo.addProperty("productionRate", productionRate);
             jo.addProperty("maxHitpoint", fHitpoint);
-            //jo.addProperty("catchUpPoint", fCatchUpPoint);
             jo.addProperty("townHallLevelRequired", iTownHallLevelReq);
             jo.addProperty("description", sDescription);
 
@@ -2704,11 +2570,45 @@ public class JSon extends javax.swing.JFrame {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            
+
+        unitTypeRes.setText("");
+        nameRes.setText("");
+        descriptionRes.setText("");
+        buildTimeRes.setText("");
+        hitpointRes.setText("");
+        buildCostRes.setText("");
+        experienceRes.setText("");
+        boostCostRes.setText("");
+        pCapacityRes.setText("");
+        productionRateRes.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:                
+        if(unitTypeRes.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan unit type dengan lengkap");
+            return;
+        }
+        if(nameRes.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan name dengan lengkap");
+            return;
+        }
+        if(descriptionRes.getText().equals("")) {
+            descriptionRes.setText("-");
+        }
+        
+        if(buildTimeRes.getText().equals("")) {
+            buildTimeRes.setText("0");
+        }
+        if(hitpointRes.getText().equals("")) {
+            hitpointRes.setText("0");
+        }
+        
+        int unitType = getInt(unitTypeRes);
+        int buildCost = getInt(buildCostRes);
+        int experience = getInt(experienceRes);
+        int storageCapacity = getInt(sCapacityRes);
+        
         Object Name = nameRes.getText();
         Object BuildTime = buildTimeRes.getText();
         Object Description = descriptionRes.getText();
@@ -2727,31 +2627,6 @@ public class JSon extends javax.swing.JFrame {
         int iTownHallLevelReq = Integer.parseInt(sTownHallLevelReq);
         float fBuildTime = Float.parseFloat(sBuildTime);
         float fHitpoint = Float.parseFloat(sHitpoint);
-
-        int unitType = getInt(unitTypeRes);
-//        if(nameRes.getText().equals("")) {
-//            nameRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan nama dengan lengkap");
-//            return;
-//        }
-        int buildCost = getInt(buildCostRes);
-        int experience = getInt(experienceRes);
-        int storageCapacity = getInt(sCapacityRes);
-//        if(descriptionRes.getText().equals("")) {
-//            descriptionRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(buildTimeRes.getText().equals("")) {
-//            buildTimeRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(hitpointRes.getText().equals("")) {
-//            hitpointRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -2791,55 +2666,50 @@ public class JSon extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(this, "Gagal membuat file");
                     e.printStackTrace();
                 }
+            
+        unitTypeRes.setText("");
+        nameRes.setText("");
+        descriptionRes.setText("");
+        buildTimeRes.setText("");
+        hitpointRes.setText("");
+        buildCostRes.setText("");
+        experienceRes.setText("");
+        sCapacityRes.setText("");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-
+        if(unitTypeDef.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan unit type dengan lengkap");
+            return;
+        }
+        if(nameDef.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan name dengan lengkap");
+            return;
+        }
+        if(descriptionDef.getText().equals("")) {
+            descriptionDef.setText("-");
+        }
+        
         if(damageShotDef.getText().equals("")) {
-            //damageShotDef.setBackground(Color.red);
-            //JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-            //return;
             damageShotDef.setText("0");
         }
         if(rangeDef.getText().equals("")) {
-            //rangeDef.setBackground(Color.red);
-            //JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-            //return;
             rangeDef.setText("0");
         }
         if(hitpointDef.getText().equals("")) {
-            //hitpointDef.setBackground(Color.red);
-            //JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-            //return;
             hitpointDef.setText("0");
         }
         if(buildTimeDef.getText().equals("")) {
-            //buildTimeDef.setBackground(Color.red);
-            //JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-            //return;
             buildTimeDef.setText("0");
         }
         if(attackSpeedDef.getText().equals("")) {
-            //attackSpeedDef.setBackground(Color.red);
-            //JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-            //return;
             attackSpeedDef.setText("0");
-        }
+        }        
 
         int unitType = getInt(unitTypeDef);
-        if(nameDef.getText().equals("")) {
-            nameDef.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Isikan unit type");
-            return;
-        }
         int buildCost = getInt (buildCostDef);
         int experience = getInt(experienceDef);
-        if(descriptionDef.getText().equals("")) {
-            descriptionDef.setBackground(Color.red);
-            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-            return;
-        }
         
         Object Damage = damageShotDef.getText();
         Object Range = rangeDef.getText();
@@ -2874,44 +2744,6 @@ public class JSon extends javax.swing.JFrame {
         float fHitpoint = Float.parseFloat(sHitpoint);
         float fBuildTime = Float.parseFloat(sBuildTime);
         float fAttackSpeed = Float.parseFloat(sAttackSpeed);
-
-//        if(damageShotDef.getText().equals("")) {
-//            damageShotDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-//            return;
-//        }
-//        if(rangeDef.getText().equals("")) {
-//            rangeDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-//            return;
-//        }
-//        if(hitpointDef.getText().equals("")) {
-//            hitpointDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-//            return;
-//        }
-//        if(buildTimeDef.getText().equals("")) {
-//            buildTimeDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-//            return;
-//        }
-//        if(attackSpeedDef.getText().equals("")) {
-//            attackSpeedDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-//            return;
-//        }
-
-//        if(nameDef.getText().equals("")) {
-//            nameDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan nama dengan lengkap");
-//            return;
-//        }
-//        if(descriptionDef.getText().equals("")) {
-//            descriptionDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-        //float fDamagePerSecond = Float.parseFloat(sDamagePerSecond);
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -2955,10 +2787,52 @@ public class JSon extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(this, "Gagal membuat file");
                     e.printStackTrace();
                 }
+
+          unitTypeDef.setText("");
+          buildCostDef.setText("");
+          experienceDef.setText("");
+          damageShotDef.setText("");
+          rangeDef.setText("");
+          nameDef.setText("");
+          descriptionDef.setText("");
+          hitpointDef.setText("");
+          buildTimeDef.setText("");
+          attackSpeedDef.setText("");
+          damageSecondDef.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+       if(unitTypeDef.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan unit type dengan lengkap");
+            return;
+        }
+        if(nameDef.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan name dengan lengkap");
+            return;
+        }
+        if(descriptionDef.getText().equals("")) {
+            descriptionDef.setText("-");
+        }
+        
+        if(damageDef.getText().equals("")) {
+            damageDef.setText("0");
+        }
+        if(triggerRadiusDef.getText().equals("")) {
+            triggerRadiusDef.setText("0");
+        }
+        if(buildTimeDef.getText().equals("")) {
+            buildTimeDef.setText("0");
+        }
+        if(damageRadiusDef.getText().equals("")) {
+            damageRadiusDef.setText("0");
+        }
+        
+        int unitType = getInt(unitTypeDef);
+        int buildCost = getInt (buildCostDef);
+        int reArmCost = getInt (reArmCostDef);
+        int experience = getInt(experienceDef);
+        
         Object Damage = damageDef.getText();
         Object TriggerRadius = triggerRadiusDef.getText();
         Object Name = nameDef.getText();
@@ -2989,42 +2863,6 @@ public class JSon extends javax.swing.JFrame {
         float fTriggerRadius = Float.parseFloat(sTriggerRadius);
         float fBuildTime = Float.parseFloat(sBuildTime);
         float fDamageRadius = Float.parseFloat(sDamageRadius);
-
-//        if(damageDef.getText().equals("")) {
-//            damageDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-//            return;
-//        }
-//        if(damageRadiusDef.getText().equals("")) {
-//            damageRadiusDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-//            return;
-//        }
-//        if(buildTimeDef.getText().equals("")) {
-//            buildTimeDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-//            return;
-//        }
-//        if(triggerRadiusDef.getText().equals("")) {
-//            triggerRadiusDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan data dengan lengkap");
-//            return;
-//        }
-
-        int unitType = getInt(unitTypeDef);
-//        if(nameDef.getText().equals("")) {
-//            nameDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan nama dengan lengkap");
-//            return;
-//        }
-        int buildCost = getInt (buildCostDef);
-        int reArmCost = getInt (reArmCostDef);
-        int experience = getInt(experienceDef);
-//        if(descriptionDef.getText().equals("")) {
-//            descriptionDef.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -3068,10 +2906,46 @@ public class JSon extends javax.swing.JFrame {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            
+          unitTypeDef.setText("");
+          buildCostDef.setText("");
+          reArmCostDef.setText("");
+          experienceDef.setText("");
+          damageDef.setText("");
+          triggerRadiusDef.setText("");
+          nameDef.setText("");
+          descriptionDef.setText("");
+          buildTimeDef.setText("");
+          damageRadiusDef.setText("");
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        if(unitTypeAr.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan unit type dengan lengkap");
+            return;
+        }
+        if(nameAr.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan name dengan lengkap");
+            return;
+        }
+        if(descriptionAr.getText().equals("")) {
+            descriptionAr.setText("-");
+        }
+        
+        if(hitpointAr.getText().equals("")) {
+            hitpointAr.setText("0");
+        }
+        if(buildTimeAr.getText().equals("")) {
+            buildTimeAr.setText("-");
+        }
+        
+        int unitType = getInt(unitTypeAr);
+        int buildCost = getInt(buildCostAr);
+        int experience = getInt(experienceAr);
+        int boostCost = getInt(boostCostAr);
+        int maximumUnit = getInt(maximumUnitAr);
+        
         Object Hitpoint = hitpointAr.getText();
         Object BuildTime = buildTimeAr.getText();
         Object Name = nameAr.getText();
@@ -3090,22 +2964,6 @@ public class JSon extends javax.swing.JFrame {
         float fBuildTime = Float.parseFloat(sBuildTime);
         int iLevel = Integer.parseInt(sLevel);
         int iTownHallLevelReq = Integer.parseInt(sLevelTownHallReq);
-
-        int unitType = getInt(unitTypeAr);
-        int buildCost = getInt(buildCostAr);
-        int experience = getInt(experienceAr);
-        int boostCost = getInt(boostCostAr);
-        int maximumUnit = getInt(maximumUnitAr);
-//        if(hitpointAr.getText().equals("")) {
-//            hitpointAr.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(buildTimeAr.getText().equals("")) {
-//            buildTimeAr.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -3159,10 +3017,44 @@ public class JSon extends javax.swing.JFrame {
             
             modelArmy.clear();
             armyList.setModel(modelArmy);
+          
+          unitTypeAr.setText("");
+          buildCostAr.setText("");
+          experienceAr.setText("");
+          boostCostAr.setText("");
+          maximumUnitAr.setText("");
+          hitpointAr.setText("");
+          buildTimeAr.setText("");
+          nameAr.setText("");
+          descriptionAr.setText("");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+       if(unitTypeAr.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan unit type dengan lengkap");
+            return;
+        }
+        if(nameAr.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan name dengan lengkap");
+            return;
+        }
+        if(descriptionAr.getText().equals("")) {
+            descriptionAr.setText("-");
+        }
+        
+        if(hitpointAr.getText().equals("")) {
+            hitpointAr.setText("0");
+        }
+        if(buildTimeAr.getText().equals("")) {
+            buildTimeAr.setText("-");
+        }
+        
+        int unitType = getInt(unitTypeAr);
+        int buildCost = getInt(buildCostAr);
+        int experience = getInt(experienceAr);
+        int troopsCapacity = getInt(troopCapacityAr);
+        
         Object Hitpoint = hitpointAr.getText();
         Object BuildTime = buildTimeAr.getText();
         Object Name = nameAr.getText();
@@ -3182,20 +3074,6 @@ public class JSon extends javax.swing.JFrame {
         int iLevel = Integer.parseInt(sLevel);
         int iTownHallLevelReq = Integer.parseInt(sLevelTownHallReq);
 
-        int unitType = getInt(unitTypeAr);
-        int buildCost = getInt(buildCostAr);
-        int experience = getInt(experienceAr);
-        int troopsCapacity = getInt(troopCapacityAr);
-//        if(hitpointAr.getText().equals("")) {
-//            hitpointAr.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(buildTimeAr.getText().equals("")) {
-//            buildTimeAr.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
         
@@ -3233,10 +3111,60 @@ public class JSon extends javax.swing.JFrame {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            
+          unitTypeAr.setText("");
+          buildCostAr.setText("");
+          experienceAr.setText("");
+          boostCostAr.setText("");
+          maximumUnitAr.setText("");
+          hitpointAr.setText("");
+          buildTimeAr.setText("");
+          nameAr.setText("");
+          descriptionAr.setText("");
+          troopCapacityAr.setText("");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        if(unitTypeArmy.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan unit type dengan lengkap");
+            return;
+        }
+        if(nameArmy.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan name dengan lengkap");
+            return;
+        }
+        if(descriptionArmy.getText().equals("")) {
+            descriptionArmy.setText("-");
+        }
+
+        if(damageAttackArmy.getText().equals("")) {
+            damageAttackArmy.setText("0");
+        }
+        if(hitpointArmy.getText().equals("")) {
+            hitpointArmy.setText("0");
+        }
+        if(researchTimeArmy.getText().equals("")) {
+            researchTimeArmy.setText("0");
+        }
+        if(trainingTimeArmy.getText().equals("")) {
+            trainingTimeArmy.setText("0");
+        }
+        if(movementSpeedArmy.getText().equals("")) {
+            movementSpeedArmy.setText("0");
+        }
+        if(attackSpeedArmy.getText().equals("")) {
+            attackSpeedArmy.setText("0");
+        }
+        if(rangeArmy.getText().equals("")) {
+            rangeArmy.setText("0");
+        }
+        
+        int trainingCost = getInt(trainingCostArmy);
+        int researchCost = getInt(researchCostArmy);
+        int hausingSpace = getInt(housingSpaceArmy);
+        int unitType = getInt(unitTypeArmy);
+        
         Object Level = levelArmy.getSelectedItem();
         Object DamagePerAttack = damageAttackArmy.getText();
         Object Hitpoint = hitpointArmy.getText();
@@ -3277,47 +3205,6 @@ public class JSon extends javax.swing.JFrame {
         float fMovemendSpeed = Float.parseFloat(sMovemendSpeed);
         float fAttackSeed = Float.parseFloat(sAttackSpeed);
         float fRange = Float.parseFloat(sRange);
-
-        int trainingCost = getInt(trainingCostArmy);
-        int researchCost = getInt(researchCostArmy);
-        int hausingSpace = getInt(housingSpaceArmy);
-        int unitType = getInt(unitTypeArmy);
-//        if(descriptionRes.getText().equals("")) {
-//            descriptionRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(descriptionRes.getText().equals("")) {
-//            descriptionRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(descriptionRes.getText().equals("")) {
-//            descriptionRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(descriptionRes.getText().equals("")) {
-//            descriptionRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(descriptionRes.getText().equals("")) {
-//            descriptionRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(descriptionRes.getText().equals("")) {
-//            descriptionRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
-//        if(descriptionRes.getText().equals("")) {
-//        if(descriptionArmy.getText().equals("")) {
-//            descriptionRes.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -3365,6 +3252,20 @@ public class JSon extends javax.swing.JFrame {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            
+          trainingCostArmy.setText("");
+          researchCostArmy.setText("");
+          housingSpaceArmy.setText("");
+          unitTypeArmy.setText("");          
+          damageAttackArmy.setText("");
+          hitpointArmy.setText("");          
+          researchTimeArmy.setText("");
+          nameArmy.setText("");
+          descriptionArmy.setText("");          
+          trainingTimeArmy.setText("");
+          movementSpeedArmy.setText("");
+          attackSpeedArmy.setText("");
+          rangeArmy.setText("");
     }//GEN-LAST:event_jButton7ActionPerformed
  int damage,speed,hasil ;
  int damageD,speedDef,hasilDef ;
@@ -3382,19 +3283,20 @@ public class JSon extends javax.swing.JFrame {
 
     private void attackSpeedArmyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_attackSpeedArmyFocusLost
         // TODO add your handling code here:
-                speed=Integer.parseInt(attackSpeedArmy.getText());
+        speed=Integer.parseInt(attackSpeedArmy.getText());
         
-               if (!damageAttackArmy.getText().equals("")){
-                       damage=Integer.parseInt(damageAttackArmy.getText());
-                       hasil = damage/speed;
-                   damageSecondArmy.setText(Integer.toString(hasil));
+        if (!damageAttackArmy.getText().equals("")){
+        damage=Integer.parseInt(damageAttackArmy.getText());
+        hasil = damage/speed;
+        damageSecondArmy.setText(Integer.toString(hasil));
                    }
     }//GEN-LAST:event_attackSpeedArmyFocusLost
 
     private void damageShotDefFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_damageShotDefFocusLost
         // TODO add your handling code here:
-        damageD=Integer.parseInt(damageShotDef.getText());
-       
+//       if (!damageDef.getText().equals("")){
+       damageD=Integer.parseInt(damageShotDef.getText());
+//       }
        if (!attackSpeedDef.getText().equals("")){
        speedDef=Integer.parseInt(attackSpeedDef.getText());
            hasilDef = damageD/speedDef;    
@@ -3404,8 +3306,9 @@ public class JSon extends javax.swing.JFrame {
 
     private void attackSpeedDefFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_attackSpeedDefFocusLost
         // TODO add your handling code here:
-        speedDef=Integer.parseInt(attackSpeedDef.getText());
-       
+//       if (!attackSpeedDef.getText().equals("")){
+       speedDef=Integer.parseInt(attackSpeedDef.getText());
+//       }
        if (!damageDef.getText().equals("")){
        damageD=Integer.parseInt(damageDef.getText());
            hasilDef = damageD/speedDef;    
@@ -3461,6 +3364,39 @@ public class JSon extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
+        if(unitTypeRes1.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan unit type dengan lengkap");
+            return;
+        }
+        if(nameRes1.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Isikan name dengan lengkap");
+            return;
+        }
+        if(descriptionRes1.getText().equals("")) {
+            descriptionRes1.setText("-");
+        }
+
+        if(buildTimeRes1.getText().equals("")) {
+            buildTimeRes1.setText("0");
+        }
+        if(hitpointRes1.getText().equals("")) {
+            hitpointRes1.setText("0");
+        }
+        if(availableToBeStolen.getText().equals("")) {
+            availableToBeStolen.setText("0");
+        }
+        
+        int unitType = getInt(unitTypeRes1);
+        int maximumNumberOfBuild = getInt(maximumNumberOfBuildAvailable);
+        int goldAva = getInt(goldAvailable);
+        int elixirAva = getInt(elixirAvailable);
+        int darkElixirAva = getInt(darkElixirAvailable);
+        int availableToBeStolenTH = getInt(availableToBeStolen);
+        int cap = getInt(capTH);
+        int storageAmount = getInt(storageAmountToReachCap);
+        int buildCost = getInt(buildCostRes1);
+        int experience = getInt(experienceRes1);
+        
         Object Name = nameRes1.getText();
         Object BuildTime = buildTimeRes1.getText();
         Object Description = descriptionRes1.getText();
@@ -3482,27 +3418,6 @@ public class JSon extends javax.swing.JFrame {
         float fBuildTime = Float.parseFloat(sBuildTime);
         float fHitpoint = Float.parseFloat(sHitpoint);
         float fAvailableToBeStolen = Float.parseFloat(sAvailableToBeStolen);
-
-        int unitType = getInt(unitTypeRes1);
-        int maximumNumberOfBuild = getInt(maximumNumberOfBuildAvailable);
-        int goldAva = getInt(goldAvailable);
-        int elixirAva = getInt(elixirAvailable);
-        int darkElixirAva = getInt(darkElixirAvailable);
-        int availableToBeStolenTH = getInt(availableToBeStolen);
-        int cap = getInt(capTH);
-        int storageAmount = getInt(storageAmountToReachCap);
-//        if(nameRes1.getText().equals("")) {
-//            nameRes1.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan nama dengan lengkap");
-//            return;
-//        }
-        int buildCost = getInt(buildCostRes1);
-        int experience = getInt(experienceRes1);
-//        if(descriptionRes1.getText().equals("")) {
-//            descriptionRes1.setBackground(Color.red);
-//            JOptionPane.showMessageDialog(this, "Isikan description dengan lengkap");
-//            return;
-//        }
 
         Path currentRelativePath = Paths.get("");
         String currentPathString = currentRelativePath.toAbsolutePath().toString();
@@ -3635,6 +3550,16 @@ public class JSon extends javax.swing.JFrame {
             maxLevelList2.setModel(maxLvlbuild2);
             maxLvlbuild3.clear();
             maxLevelList3.setModel(maxLvlbuild3);
+            
+        unitTypeRes1.setText("");
+        nameRes1.setText("");
+        descriptionRes1.setText("");
+        buildTimeRes1.setText("");
+        hitpointRes1.setText("");
+        buildCostRes1.setText("");
+        experienceRes1.setText("");
+        
+        
     }//GEN-LAST:event_jButton12ActionPerformed
     
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
